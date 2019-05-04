@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"install_prereleases":
+	{
+		"IsPresent": false
+	},
+	"installed_packages":
+	[
+		"AngularJS",
+		"AngularJS Snippets",
+		"Hide Menu",
+		"Package Control",
+		"PowerShell",
+		"Theme - Spacegray"
+	]
+}

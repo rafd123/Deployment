@@ -1,0 +1,13 @@
+{
+	"added_words":
+	[
+		"Refactor",
+		"tokenization",
+		"refactor",
+		"Refactored"
+	],
+	"diff_style": "auto",
+	"hide_menu": true,
+	"theme": "Merge Dark.sublime-theme",
+	"word_wrap": false
+}

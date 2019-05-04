@@ -1,0 +1,3 @@
+[include]
+	path = ~/.gitconfig_common.xplat
+	path = ~/.gitconfig_common.plat

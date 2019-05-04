@@ -1,0 +1,57 @@
+#!/bin/sh
+ 
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# Information about the commits which are being pushed is
+# supplied as lines to the standard input in the form:
+#
+#   <local ref> <local sha1> <remote ref> <remote sha1>
+#
+# This sample shows how to prevent push of commits where the
+# log message starts with "WIP" (work in progress) and is pushed
+# to a refs/heads/ready or refs/heads/directPatch
+ 
+remote="$1"
+url="$2"
+ 
+z40=0000000000000000000000000000000000000000
+
+IFS=' '
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [[ $remote_ref != refs/heads/master ]]
+  then
+    # Unprotected branch; skip check
+    continue
+  fi
+  
+  if [ "$local_sha" = $z40 ]
+  then
+    # Handle delete
+    :
+  else
+    # Only inspect commits not yet merged into origin/master
+    range="origin/master..$local_sha"
+ 
+    # Check for WIP commit
+    commit=`git rev-list -n 1 --grep '^wip' -i "$range"`
+    if [ -n "$commit" ]
+    then
+      echo "Found WIP commit in $local_ref: $commit, not pushing."
+      exit 1
+    fi
+
+    # Check for FIXUP commit
+    commit=`git rev-list -n 1 --grep '^fixup!' -i "$range"`
+    if [ -n "$commit" ]
+    then
+      echo "Found FIXUP commit in $local_ref: $commit, not pushing."
+      exit 1
+    fi    
+  fi
+done
+ 
+exit 0

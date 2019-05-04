@@ -1,0 +1,95 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+  "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
+
+  "window.menuBarVisibility": "toggle",
+
+  "editor.rulers": [80, 120],
+  // Files
+  // Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
+  "files.associations": {
+    "*.m": "matlab"
+  },
+
+  // Matlab configuration
+  // The path to the matlab executable.
+  "matlab.matlabpath": null,
+
+  // The path to the mlint executable
+  "matlab.mlintpath": null,
+
+  // Run the linting on save of file.
+  "matlab.lintOnSave": false,
+  "window.zoomLevel": 0,
+  "[cpp]": {
+    "editor.quickSuggestions": false
+  },
+  "[c]": {
+    "editor.quickSuggestions": false
+  },
+  "cSpell.userWords": [
+    "Dropdown",
+    "Matlab",
+    "Transpiles",
+    "javacript",
+    "lifecycle"
+  ],
+  "vim.disableAnnoyingNeovimMessage": true,
+
+  "editor.minimap.maxColumn": 50,
+
+  "workbench.colorCustomizations": {
+    "terminal.ansiBrightBlack": "#808080",
+    "statusBar.background": "#505050",
+    "activityBarBadge.background": "#808080"
+  },
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+  "cSpell.language": "en,en-US",
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pub",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ],
+  "editor.minimap.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.mouseWheelZoom": true,
+  "breadcrumbs.enabled": true,
+  "files.eol": "\n",
+  "terminal.integrated.rendererType": "dom",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "numberedBookmarks.navigateThroughAllFiles": "replace",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.eslintIntegration": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tabCompletion": "on",
+  "liveServer.settings.donotVerifyTags": true,
+  "files.hotExit": "onExitAndWindowClose"
+}

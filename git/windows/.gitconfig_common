@@ -1,0 +1,27 @@
+[core]
+	#editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -w
+	#editor = code --wait --new-window
+	editor = code --wait
+	longpaths = true
+	symlinks = true
+[difftool]
+	prompt = false
+[merge]
+	tool = BeyondCompare4
+[mergetool "bc4"]
+	cmd = \"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[credential]
+	# helper = !\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\"
+    helper = wincred
+[difftool "BeyondCompare4"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+[difftool "beyondcompare4"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+	cmd = \"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+[mergetool "BeyondCompare4"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+	cmd = \"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[alias]
+  open = !explorer `git config remote.origin.url`
+  browse = !git open

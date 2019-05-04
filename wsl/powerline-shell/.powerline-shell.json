@@ -1,0 +1,18 @@
+{
+  "segments": [
+    "newline",
+    "text",
+    "cwd",
+    "git",
+    "newline",
+    "root",
+    "virtual_env"
+  ],
+  "cwd": {
+    "max_depth": 2
+  },
+  "vcs": {
+  	"show_symbol": true
+  },
+  "theme": "~/.powerline-shell-theme.py"
+}

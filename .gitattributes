@@ -1,0 +1,2 @@
+# Don't perform line ending normalization regardless of core.autocrlf setting
+* -text
