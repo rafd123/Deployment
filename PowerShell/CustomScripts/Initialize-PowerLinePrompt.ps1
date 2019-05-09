@@ -41,7 +41,7 @@ $global:PowerLinePromptConfig = New-Object psobject -Property @{
   }
 }
 
-if ($env:TERM_PROGRAM -eq 'vscode' -or $env:VSCODE_PID -or $env:VSCODE_CWD -or $env:TERM_PROGRAM -eq 'Hyper' -or $env:SESSIONNAME -ne 'Console') {
+if ($env:TERM_PROGRAM -eq 'Hyper' -or $env:SESSIONNAME -ne 'Console') {
   $PowerLinePromptConfig.FullColor = $false
   $PowerLinePromptConfig.DefaulLightBackground = 'Gray'
   $PowerLinePromptConfig.DefaulDarkBackground = 'DarkGray'
