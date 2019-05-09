@@ -34,7 +34,7 @@ Set-Alias sw Search-Web
 Set-Alias pt ConvertTo-PrettyTable
 Set-Alias -Name octave -Value 'C:\Octave\Octave-4.2.0\bin\octave-cli.exe'
 Remove-Item alias:\curl -ErrorAction SilentlyContinue; Set-Alias -Name curl -Value "$env:ProgramFiles\Git\mingw64\bin\curl.exe" -Force
-Get-ChildItem $env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue |
+Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains,$env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue |
     Sort-Object { $_.VersionInfo.ProductVersionRaw } -Descending |
     Select-Object -First 1 |
     # Select-Object -Last 1 |

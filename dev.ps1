@@ -22,7 +22,7 @@ cinst visualstudio2017-workload-netweb -y
 cinst resharper -y
 #endregion
 
-cinst jetbrains-rider --version 2017.2.1 -y
+cinst jetbrains-rider -y
 
 #region ruby
 #cinst ruby -version 2.2.4 -y # this is the max version that works with nokogiri
