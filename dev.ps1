@@ -25,3 +25,6 @@ cinst resharper -y
 #endregion
 
 cinst windbg -y
+
+Remove-Item "$([environment]::GetFolderPath('Desktop'))\*.lnk"
+Remove-Item "$([environment]::GetFolderPath('CommonDesktop'))\*.lnk"
