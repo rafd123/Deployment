@@ -10,7 +10,19 @@ if(-not $isAdmin) {
     return
  }
 
-#cinst crashplanpro -y
-#cinst octave -y
-#cinst virtualbox -y
-#cinst shotcut -y
+# Install-Module AWSPowerShell -Scope CurrentUser -Force
+# Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber -Force
+# cinst sql-server-management-studio -y
+# cinst jetbrains-rider -y
+# cinst sql-server-express -y
+# cinst pgadmin4 -y
+# cinst crashplanpro -y
+# cinst octave -y
+# cinst virtualbox -y
+# cinst shotcut -y
+
+#region ruby
+# cinst ruby -version 2.2.4 -y # this is the max version that works with nokogiri
+# cinst ruby2.devkit -y
+# cmd /c gem install bundler -v 1.12.5 # this is the max version vagrant works with
+#endregion

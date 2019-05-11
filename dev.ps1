@@ -22,23 +22,4 @@ cinst visualstudio2017-workload-netweb -y
 cinst resharper -y
 #endregion
 
-cinst jetbrains-rider -y
-
-#region ruby
-#cinst ruby -version 2.2.4 -y # this is the max version that works with nokogiri
-#cinst ruby2.devkit -y
-#cmd /c gem install bundler -v 1.12.5 # this is the max version vagrant works with
-#endregion
-
-Install-Module AWSPowerShell -Scope CurrentUser -Force
-Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber -Force
-
-cinst openvpn -y
-cinst nodejs.install -y
 cinst windbg -y
-cinst Firefox -y
-#cinst sqlyog -y
-cinst sql-server-management-studio -y
-cinst sql-server-express -y
-cinst pgadmin4 -y
-cinst elixir -y; refreshenv; mix local.hex --force; mix local.rebar --force
