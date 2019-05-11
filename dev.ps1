@@ -10,6 +10,8 @@ if(-not $isAdmin) {
     return
 }
 
+. $PSScriptRoot\base.ps1
+
 #region Hyper-V
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -ErrorAction SilentlyContinue `
 | Enable-WindowsOptionalFeature -Online -NoRestart
