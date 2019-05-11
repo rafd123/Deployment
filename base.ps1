@@ -257,7 +257,7 @@ cinst veracrypt -y
 cinst GoogleChrome -y
 cinst edgedeflector -y
 cinst beyondcompare -y
-cinst procexp -y
+cinst sysinternals -y
 
 Remove-Item "$([environment]::GetFolderPath('Desktop'))\*.lnk"
 Remove-Item "$([environment]::GetFolderPath('CommonDesktop'))\*.lnk"
