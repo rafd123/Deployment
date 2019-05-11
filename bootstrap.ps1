@@ -21,4 +21,8 @@ $deploymentDir = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'Deploy
 
 git clone https://github.com/rafd123/Deployment.git $deploymentDir
 
-& "$deploymentDir\base.ps1"
+if (-not $DeployType) {
+   $DeployType = 'base'
+}
+
+& "$deploymentDir\$DeployType.ps1"
