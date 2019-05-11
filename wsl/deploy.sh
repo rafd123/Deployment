@@ -43,6 +43,7 @@ ln -sf $WIN_HOMEPATH/.ssh ~/.ssh
 mkdir -p /mnt/tmp
 mount -t drvfs C: /mnt/tmp -o metadata
 chown $SUDO_USER /mnt/tmp$WIN_HOMEPATHBASE/.ssh /mnt/tmp$WIN_HOMEPATHBASE/.ssh/*
+chmod 600 ~/.ssh ~/.ssh/*
 umount /mnt/tmp
 rm -fr /mnt/tmp
 
@@ -106,5 +107,3 @@ apt-get install sublime-text -y
 #endregion
 
 chown $SUDO_USER ~/.config ~/.config/*
-chown $SUDO_USER ~/.ssh ~/.ssh/*
-chmod 600 ~/.ssh ~/.ssh/*
