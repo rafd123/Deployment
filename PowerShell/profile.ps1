@@ -34,15 +34,19 @@ Set-Alias sw Search-Web
 Set-Alias pt ConvertTo-PrettyTable
 Set-Alias -Name octave -Value 'C:\Octave\Octave-4.2.0\bin\octave-cli.exe'
 Remove-Item alias:\curl -ErrorAction SilentlyContinue; Set-Alias -Name curl -Value "$env:ProgramFiles\Git\mingw64\bin\curl.exe" -Force
-Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains,$env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue |
-    Sort-Object { $_.VersionInfo.ProductVersionRaw } -Descending |
-    Select-Object -First 1 |
-    # Select-Object -Last 1 |
-    Select-Object -ExpandProperty FullName |
-    ForEach-Object { Set-Alias rider $_ }
 #endregion
 
 #region functions
+function rider {
+    $rider = Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains,$env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue `
+    | Sort-Object { $_.VersionInfo.ProductVersionRaw } -Descending `
+    | Select-Object -First 1 `
+    | Select-Object -ExpandProperty FullName `
+
+    Write-Warning $rider
+    & $rider $args
+}
+
 function prompt {
     Set-StrictMode -Off
 
