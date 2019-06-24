@@ -152,6 +152,7 @@ New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "~\.dep
 cinst visualstudiocode -y
 RefreshEnv
 code --install-extension ms-vscode.PowerShell
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
