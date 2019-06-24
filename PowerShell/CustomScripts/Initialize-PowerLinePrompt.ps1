@@ -41,16 +41,16 @@ $global:PowerLinePromptConfig = New-Object psobject -Property @{
   }
 }
 
-if ($env:TERM_PROGRAM -eq 'Hyper' -or $env:SESSIONNAME -ne 'Console') {
-  $PowerLinePromptConfig.FullColor = $false
-  $PowerLinePromptConfig.DefaulLightBackground = 'Gray'
-  $PowerLinePromptConfig.DefaulDarkBackground = 'DarkGray'
-  $PowerLinePromptConfig.Git.Branch.Background = 'DarkMagenta'
-  $PowerLinePromptConfig.Git.Identical.Background = 'DarkMagenta'
-  $PowerLinePromptConfig.Git.BehindBy.Background = 'Red'
-  $PowerLinePromptConfig.Git.AheadBy.Background = 'DarkGreen'
-  $PowerLinePromptConfig.Git.UnstagedChanges.Background = 'DarkRed'
-}
+# if ($env:TERM_PROGRAM -eq 'Hyper' -or $env:SESSIONNAME -ne 'Console') {
+#   $PowerLinePromptConfig.FullColor = $false
+#   $PowerLinePromptConfig.DefaulLightBackground = 'Gray'
+#   $PowerLinePromptConfig.DefaulDarkBackground = 'DarkGray'
+#   $PowerLinePromptConfig.Git.Branch.Background = 'DarkMagenta'
+#   $PowerLinePromptConfig.Git.Identical.Background = 'DarkMagenta'
+#   $PowerLinePromptConfig.Git.BehindBy.Background = 'Red'
+#   $PowerLinePromptConfig.Git.AheadBy.Background = 'DarkGreen'
+#   $PowerLinePromptConfig.Git.UnstagedChanges.Background = 'DarkRed'
+# }
 
 function global:Write-PowerLineGitStatus {
     [CmdletBinding()]
