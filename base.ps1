@@ -160,6 +160,7 @@ code --install-extension ms-python.python
 code --install-extension alefragnani.numbered-bookmarks
 code --install-extension mjmcloug.vscode-elixir
 code --install-extension sammkj.vscode-elixir-formatter
+code --install-extension formulahendry.vscode-mysql
 #endregion
 
 #region WSL
