@@ -57,6 +57,12 @@ Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShe
 Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\"
 #endregion
 
+#region Terminal
+$terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+mkdir $terminalAppDataDirectory -Force
+New-Item -Path "$terminalAppDataDirectory\RoamingState" -ItemType SymbolicLink -Value "~\.deployment\Terminal" -Force
+#endregion
+
 #region Developer mode
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -Value 1
 #endregion
