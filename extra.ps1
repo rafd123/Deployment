@@ -26,3 +26,11 @@ if(-not $isAdmin) {
 # cinst ruby2.devkit -y
 # cmd /c gem install bundler -v 1.12.5 # this is the max version vagrant works with
 #endregion
+
+# cinst screenpresso --ignore-checksums -y
+
+#region Snagit
+# cinst snagit -y
+# mkdir "$($env:LOCALAPPDATA)\TechSmith\Snagit" -Force | Out-Null
+# New-Item -Path "$($env:LOCALAPPDATA)\TechSmith\Snagit\Presets2.xml" -ItemType SymbolicLink -Value "~\.deployment\Snagit\Presets2.xml" -Force
+#endregion

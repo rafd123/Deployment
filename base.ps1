@@ -262,13 +262,6 @@ cinst ditto -y
 Start-Process "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Ditto\Ditto.lnk"
 #endregion
 
-#region Snagit
-# cinst screenpresso --ignore-checksums -y
-cinst snagit -y
-mkdir "$($env:LOCALAPPDATA)\TechSmith\Snagit" -Force | Out-Null
-New-Item -Path "$($env:LOCALAPPDATA)\TechSmith\Snagit\Presets2.xml" -ItemType SymbolicLink -Value "~\.deployment\Snagit\Presets2.xml" -Force
-#endregion
-
 #region VeraCrypt
 mkdir "$($env:APPDATA)\VeraCrypt" -Force | Out-Null
 New-Item -Path "$($env:APPDATA)\VeraCrypt\Configuration.xml" -ItemType SymbolicLink -Value "~\.deployment\VeraCrypt\Configuration.xml" -Force
