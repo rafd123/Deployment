@@ -15,6 +15,14 @@ if(-not $isAdmin) {
 #region Hyper-V
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -ErrorAction SilentlyContinue `
 | Enable-WindowsOptionalFeature -Online -NoRestart
+
+Get-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -ErrorAction SilentlyContinue `
+| Enable-WindowsOptionalFeature -Online -NoRestart
+#endregion
+
+#region Docker
+cinst docker-desktop -y
+Install-Module DockerCompletion -Scope CurrentUser -Force
 #endregion
 
 #region Visual Studio

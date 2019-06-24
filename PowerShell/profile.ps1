@@ -83,6 +83,10 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
+if (Get-Module DockerCompletion -ListAvailable) {
+    Import-Module DockerCompletion
+}
+
 Import-Module DirColors
 Update-DirColors ~/.deployment/wsl/.dircolors
 
