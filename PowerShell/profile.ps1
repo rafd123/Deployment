@@ -110,6 +110,8 @@ function tmux {
         [switch]$UseBashConfig
     )
 
+    $args = ($args | ForEach-Object { "'$_'" }) -join ' '
+
     if ($UseBashConfig) {
         bash -c "tmux $args"
     } else {
