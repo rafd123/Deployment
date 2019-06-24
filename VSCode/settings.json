@@ -91,5 +91,9 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.tabCompletion": "on",
   "liveServer.settings.donotVerifyTags": true,
-  "files.hotExit": "onExitAndWindowClose"
+  "files.hotExit": "onExitAndWindowClose",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": true
 }
