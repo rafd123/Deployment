@@ -167,6 +167,7 @@ code --install-extension alefragnani.numbered-bookmarks
 code --install-extension mjmcloug.vscode-elixir
 code --install-extension sammkj.vscode-elixir-formatter
 code --install-extension formulahendry.vscode-mysql
+code --install-extension ms-azuretools.vscode-docker
 #endregion
 
 #region WSL
