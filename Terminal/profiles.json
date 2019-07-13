@@ -199,7 +199,7 @@
         ],
         "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
-        "showTerminalTitleInTitlebar" : true
+        "showTerminalTitleInTitlebar" : false
     },
     "profiles" :
     [
@@ -211,7 +211,7 @@
             "cursorColor" : "#FFFFFF",
             "cursorShape" : "bar",
             "fontFace" : "DejaVu Sans Mono for Powerline",
-            "fontSize" : 11,
+            "fontSize" : 10,
             "guid" : "{ebb6754f-6742-4385-aa3c-2bda098e804d}",
             "historySize" : 9001,
             "icon" : "ms-appdata:///roaming/pwsh.png",
@@ -230,7 +230,7 @@
             "cursorColor" : "#FFFFFF",
             "cursorShape" : "bar",
             "fontFace" : "DejaVu Sans Mono for Powerline",
-            "fontSize" : 11,
+            "fontSize" : 10,
             "guid" : "{5ffd218a-20a1-491d-9674-7038f59492de}",
             "historySize" : 9001,
             "icon" : "ms-appdata:///roaming/gamera.ico",
@@ -249,7 +249,7 @@
             "cursorColor" : "#FFFFFF",
             "cursorShape" : "bar",
             "fontFace" : "DejaVu Sans Mono for Powerline",
-            "fontSize" : 11,
+            "fontSize" : 10,
             "guid" : "{076ab6d5-e1da-465c-8333-c39f9970770d}",
             "historySize" : 9001,
             "icon" : "ms-appdata:///roaming/mothra.png",
