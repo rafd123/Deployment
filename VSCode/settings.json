@@ -97,5 +97,9 @@
   },
   "extensions.ignoreRecommendations": true,
   "git.enabled": false,
-  "git.autorefresh": false
+  "git.autorefresh": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.newWindowDimensions": "inherit"
 }
