@@ -32,6 +32,7 @@ cinst visualstudio2017-workload-netweb -y
 cinst resharper -y
 #endregion
 
+cinst nodejs -y
 cinst windbg -y
 
 Remove-Item "$([environment]::GetFolderPath('Desktop'))\*.lnk"

@@ -11,10 +11,22 @@ if(-not $isAdmin) {
  }
 
 # Install-Module AWSPowerShell -Scope CurrentUser -Force
+
 # Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber -Force
 # cinst sql-server-management-studio -y
-# cinst jetbrains-rider -y
 # cinst sql-server-express -y
+
+# cinst jetbrains-rider -y
+
+#region React Native
+# http://facebook.github.io/react-native/docs/getting-started.html
+# cinst nodejs python2 jdk8 androidstudio -y
+# refreshenv
+# npm install -g expo-cli react-native-cli
+# # For expo, the correct network adapter needs to show up first when running ipconfig; see:
+# # https://github.com/react-community/create-react-native-app/issues/60#issuecomment-287081523
+#endregion
+
 # cinst pgadmin4 -y
 # cinst crashplanpro -y
 # cinst octave -y

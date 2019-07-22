@@ -8,6 +8,8 @@ $env:path += ";$(Join-Path $profileDirectory 'CustomScripts')"
 $env:PSModulePath += ";$(Join-Path $profileDirectory 'CustomModules')"
 $env:PIP_REQUIRE_VIRTUALENV='true'
 $env:GIT_SSH="$env:SystemRoot\System32\OpenSSH\ssh.exe"
+$env:ANDROID_HOME="$env:LOCALAPPDATA\Android\Sdk"
+$env:path += ";$env:LOCALAPPDATA\Android\Sdk\platform-tools"
 
 $docs = [System.Environment]::GetFolderPath('MyDocuments')
 
