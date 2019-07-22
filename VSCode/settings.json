@@ -101,5 +101,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.newWindowDimensions": "inherit"
+  "window.newWindowDimensions": "inherit",
+  "search.location": "sidebar",
+  "editor.renderWhitespace": "all"
 }
