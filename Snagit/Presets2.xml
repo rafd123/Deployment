@@ -218,7 +218,7 @@
       <FixedName>SNAGIT</FixedName>
       <FileOutputAutoName>true</FileOutputAutoName>
       <UseLastFolder>false</UseLastFolder>
-      <FolderName>C:\Users\Rafael\Videos\SnagIt</FolderName>
+      <FolderName>C:\Users\Rafael\Pictures\Snagit</FolderName>
     </ShareSettingsFile>
     <ShareSettingsEmail>
       <PromptForSettings>true</PromptForSettings>
@@ -507,7 +507,7 @@
         <FixedName>SNAGIT</FixedName>
         <FileOutputAutoName>true</FileOutputAutoName>
         <UseLastFolder>false</UseLastFolder>
-        <FolderName>C:\Users\Rafael\Videos\SnagIt</FolderName>
+        <FolderName>C:\Users\Rafael\Pictures\Snagit</FolderName>
       </ShareSettingsFile>
       <ShareSettingsEmail>
         <PromptForSettings>true</PromptForSettings>
