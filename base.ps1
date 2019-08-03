@@ -189,7 +189,7 @@ if ($wslInstallationResult) {
     }
 
     if (-not (Get-AppxPackage CanonicalGroupLimited.UbuntuonWindows -ErrorAction SilentlyContinue)) {
-        . {
+        & {
             $ProgressPreference = 'SilentlyContinue'
             Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile $env:TEMP\Ubuntu.appx -UseBasicParsing
         }
