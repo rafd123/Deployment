@@ -169,6 +169,8 @@ code --install-extension mjmcloug.vscode-elixir
 code --install-extension sammkj.vscode-elixir-formatter
 code --install-extension formulahendry.vscode-mysql
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension msjsdiag.vscode-react-native
 #endregion
 
 #region WSL
