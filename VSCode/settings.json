@@ -33,6 +33,9 @@
     "Dropdown",
     "Matlab",
     "Transpiles",
+    "Unmount",
+    "actionsheet",
+    "checkin",
     "javacript",
     "lifecycle"
   ],
