@@ -8,17 +8,31 @@
         "keybindings" :
         [
             {
-                "command" : "closeTab",
+                "command" : "closePane",
                 "keys" :
                 [
-                    "ctrl+w"
+                    "ctrl+shift+w"
+                ]
+            },
+            {
+                "command" : "copy",
+                "keys" :
+                [
+                    "ctrl+shift+c"
+                ]
+            },
+            {
+                "command" : "duplicateTab",
+                "keys" :
+                [
+                    "ctrl+shift+d"
                 ]
             },
             {
                 "command" : "newTab",
                 "keys" :
                 [
-                    "ctrl+t"
+                    "ctrl+shift+t"
                 ]
             },
             {
@@ -92,6 +106,20 @@
                 ]
             },
             {
+                "command" : "openSettings",
+                "keys" :
+                [
+                    "ctrl+,"
+                ]
+            },
+            {
+                "command" : "paste",
+                "keys" :
+                [
+                    "ctrl+shift+v"
+                ]
+            },
+            {
                 "command" : "prevTab",
                 "keys" :
                 [
@@ -137,69 +165,70 @@
                 "command" : "switchToTab0",
                 "keys" :
                 [
-                    "alt+1"
+                    "ctrl+alt+1"
                 ]
             },
             {
                 "command" : "switchToTab1",
                 "keys" :
                 [
-                    "alt+2"
+                    "ctrl+alt+2"
                 ]
             },
             {
                 "command" : "switchToTab2",
                 "keys" :
                 [
-                    "alt+3"
+                    "ctrl+alt+3"
                 ]
             },
             {
                 "command" : "switchToTab3",
                 "keys" :
                 [
-                    "alt+4"
+                    "ctrl+alt+4"
                 ]
             },
             {
                 "command" : "switchToTab4",
                 "keys" :
                 [
-                    "alt+5"
+                    "ctrl+alt+5"
                 ]
             },
             {
                 "command" : "switchToTab5",
                 "keys" :
                 [
-                    "alt+6"
+                    "ctrl+alt+6"
                 ]
             },
             {
                 "command" : "switchToTab6",
                 "keys" :
                 [
-                    "alt+7"
+                    "ctrl+alt+7"
                 ]
             },
             {
                 "command" : "switchToTab7",
                 "keys" :
                 [
-                    "alt+8"
+                    "ctrl+alt+8"
                 ]
             },
             {
                 "command" : "switchToTab8",
                 "keys" :
                 [
-                    "alt+9"
+                    "ctrl+alt+9"
                 ]
             }
         ],
         "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
-        "showTerminalTitleInTitlebar" : false
+        "showTerminalTitleInTitlebar" : false,
+        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
     },
     "profiles" :
     [
@@ -318,13 +347,34 @@
             "brightWhite" : "#F2F2F2",
             "brightYellow" : "#F9F1A5",
             "cyan" : "#3A96DD",
-            "foreground" : "#F2F2F2",
+            "foreground" : "#CCCCCC",
             "green" : "#13A10E",
             "name" : "Campbell",
             "purple" : "#881798",
             "red" : "#C50F1F",
             "white" : "#CCCCCC",
             "yellow" : "#C19C00"
+        },
+        {
+            "background" : "#000000",
+            "black" : "#000000",
+            "blue" : "#000080",
+            "brightBlack" : "#808080",
+            "brightBlue" : "#0000FF",
+            "brightCyan" : "#00FFFF",
+            "brightGreen" : "#00FF00",
+            "brightPurple" : "#FF00FF",
+            "brightRed" : "#FF0000",
+            "brightWhite" : "#FFFFFF",
+            "brightYellow" : "#FFFF00",
+            "cyan" : "#008080",
+            "foreground" : "#C0C0C0",
+            "green" : "#008000",
+            "name" : "Vintage",
+            "purple" : "#800080",
+            "red" : "#800000",
+            "white" : "#C0C0C0",
+            "yellow" : "#808000"
         },
         {
             "background" : "#282C34",
@@ -369,7 +419,7 @@
             "yellow" : "#C18301"
         },
         {
-            "background" : "#073642",
+            "background" : "#002B36",
             "black" : "#073642",
             "blue" : "#268BD2",
             "brightBlack" : "#002B36",
@@ -381,11 +431,11 @@
             "brightWhite" : "#FDF6E3",
             "brightYellow" : "#657B83",
             "cyan" : "#2AA198",
-            "foreground" : "#FDF6E3",
+            "foreground" : "#839496",
             "green" : "#859900",
             "name" : "Solarized Dark",
             "purple" : "#D33682",
-            "red" : "#D30102",
+            "red" : "#DC322F",
             "white" : "#EEE8D5",
             "yellow" : "#B58900"
         },
@@ -402,11 +452,11 @@
             "brightWhite" : "#FDF6E3",
             "brightYellow" : "#657B83",
             "cyan" : "#2AA198",
-            "foreground" : "#073642",
+            "foreground" : "#657B83",
             "green" : "#859900",
             "name" : "Solarized Light",
             "purple" : "#D33682",
-            "red" : "#D30102",
+            "red" : "#DC322F",
             "white" : "#EEE8D5",
             "yellow" : "#B58900"
         }
