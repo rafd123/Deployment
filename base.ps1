@@ -134,7 +134,7 @@ Get-Process explorer | Stop-Process -Force
 #endregion
 
 #region Theme
-& "~\.deployment\theme.deskthemepack"
+& "~\.deployment\rocketwing.deskthemepack"
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name ColorPrevalence  -Value 1 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColor -Value 4280756521 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColorInactive -Value 4280756521 -PropertyType DWORD -Force
