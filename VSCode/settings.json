@@ -36,8 +36,14 @@
     "Unmount",
     "actionsheet",
     "checkin",
+    "checkins",
+    "create",
+    "datasources",
+    "deserialize",
     "javacript",
-    "lifecycle"
+    "knex",
+    "lifecycle",
+    "stringcase"
   ],
   "vim.disableAnnoyingNeovimMessage": true,
 
