@@ -46,3 +46,9 @@ if(-not $isAdmin) {
 # mkdir "$($env:LOCALAPPDATA)\TechSmith\Snagit" -Force | Out-Null
 # New-Item -Path "$($env:LOCALAPPDATA)\TechSmith\Snagit\Presets2.xml" -ItemType SymbolicLink -Value "~\.deployment\Snagit\Presets2.xml" -Force
 #endregion
+
+
+#region AquaSnap
+# reg import "$HOME\.deployment\AquaSnap\AquaSnap.reg"
+# cinst aquasnap -y
+#endregion

@@ -257,11 +257,6 @@ pip install texttable
 $env:PIP_REQUIRE_VIRTUALENV = 'true'
 #endregion
 
-#region AquaSnap
-reg import "$HOME\.deployment\AquaSnap\AquaSnap.reg"
-cinst aquasnap -y
-#endregion
-
 #region Ditto
 cinst ditto -y
 Start-Process "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Ditto\Ditto.lnk"
