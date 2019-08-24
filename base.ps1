@@ -58,6 +58,7 @@ Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft
 #endregion
 
 #region Terminal
+cinst microsoft-windows-terminal -y
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force
 Remove-Item "$terminalAppDataDirectory\RoamingState" -Force -Recurse -ErrorAction SilentlyContinue
