@@ -31,7 +31,7 @@ if(-not $isAdmin) {
 # cinst crashplanpro -y
 # cinst octave -y
 # cinst virtualbox -y
-# cinst shotcut -y
+# cinst shotcut -y (prefer Davinci Resolve over this...Davinci doesn't have a choco package)
 
 #region ruby
 # cinst ruby -version 2.2.4 -y # this is the max version that works with nokogiri
