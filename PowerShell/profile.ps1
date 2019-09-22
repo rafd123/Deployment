@@ -10,6 +10,7 @@ $env:PIP_REQUIRE_VIRTUALENV='true'
 $env:GIT_SSH="$env:SystemRoot\System32\OpenSSH\ssh.exe"
 $env:ANDROID_HOME="$env:LOCALAPPDATA\Android\Sdk"
 $env:path += ";$env:LOCALAPPDATA\Android\Sdk\platform-tools"
+$env:path += ";${env:ProgramFiles(x86)}\pgAdmin 4\v4\runtime"
 
 $docs = [System.Environment]::GetFolderPath('MyDocuments')
 
