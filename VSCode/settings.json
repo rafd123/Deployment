@@ -112,5 +112,11 @@
   },
   "window.newWindowDimensions": "inherit",
   "search.location": "sidebar",
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+  "remote.WSL.fileWatcher.polling": true,
+  "remote.containers.defaultExtensions": [
+    "streetsidesoftware.code-spell-checker",
+    "alefragnani.numbered-bookmarks",
+    "jeff-hykin.code-eol"
+  ]
 }
