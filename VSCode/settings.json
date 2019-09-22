@@ -96,7 +96,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "numberedBookmarks.navigateThroughAllFiles": "replace",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.eslintIntegration": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.tabCompletion": "on",
   "liveServer.settings.donotVerifyTags": true,
