@@ -270,6 +270,7 @@ cinst veracrypt -y
 #endregion
 
 cinst GoogleChrome -y
+cinst microsoft-edge-insider -y
 cinst edgedeflector -y
 cinst beyondcompare -y
 cinst sysinternals -y
