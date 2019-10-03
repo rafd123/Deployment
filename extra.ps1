@@ -47,8 +47,25 @@ if(-not $isAdmin) {
 # New-Item -Path "$($env:LOCALAPPDATA)\TechSmith\Snagit\Presets2.xml" -ItemType SymbolicLink -Value "~\.deployment\Snagit\Presets2.xml" -Force
 #endregion
 
-
 #region AquaSnap
 # reg import "$HOME\.deployment\AquaSnap\AquaSnap.reg"
 # cinst aquasnap -y
 #endregion
+
+# #region Hyper
+# cinst hyper -y
+# New-Item -Path "$env:APPDATA\Hyper\.hyper.js" -ItemType SymbolicLink -Value "~\.deployment\hyper\.hyper.js" -Force
+# New-Item -Path "~\.hyper.js" -ItemType SymbolicLink -Value "~\.deployment\hyper\.hyper.js" -Force
+# #endregion
+
+# #region ConEmu
+# cinst conemu -y
+# Copy-Item "~\.deployment\ConEmu\ConEmu.xml" "$($env:APPDATA)\ConEmu.xml" -Force
+# #endregion
+
+# #region Sublime Text
+# mkdir "$($env:APPDATA)\Sublime Text 3\Packages" -Force | Out-Null
+# New-Item -Path "$($env:APPDATA)\Sublime Text 3\Packages\User" -ItemType SymbolicLink -Value "~\.deployment\Sublime\Packages\User" -Force
+# cinst sublimetext3 -y
+# Write-Output 'st3' | cinst sublimetext3.packagecontrol -y
+# #endregion
