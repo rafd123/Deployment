@@ -1,4 +1,5 @@
 {
+    "$schema": "https://aka.ms/terminal-profiles-schema",
     "globals" :
     {
         "alwaysShowTabs" : true,
@@ -288,6 +289,72 @@
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
             "useAcrylic" : false
+        },
+        {
+            "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+            "hidden": true,
+            "name": "PowerShell Core",
+            "source": "Windows.Terminal.PowershellCore"
+        },
+        {
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+            "hidden": true,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{c7ef4ce6-d1d0-5897-945c-76721be7e68c}",
+            "hidden": true,
+            "name": "mandrake",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+            "hidden": true,
+            "name": "Debian",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{28fc8567-4f1e-5f4f-9ea0-0880dedd0df8}",
+            "hidden": true,
+            "name": "ollo-server",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{773eb8b3-e977-5337-b7cf-d2fc4f346ff6}",
+            "hidden": true,
+            "name": "kaldi",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{a0c74c04-8474-504a-96d2-e91f751b3e73}",
+            "hidden": true,
+            "name": "kalera",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{93963f34-d8d9-5cb3-a1ec-f66524fb2ff0}",
+            "hidden": true,
+            "name": "gee",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{1b9f3b4a-3bca-5292-98e9-5a39da69449f}",
+            "hidden": true,
+            "name": "mothra",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+            "hidden": true,
+            "name": "Ubuntu-18.04",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+            "hidden": true,
+            "name": "Azure Cloud Shell",
+            "source": "Windows.Terminal.Azure"
         }
     ],
     "schemes" :
