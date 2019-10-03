@@ -144,16 +144,6 @@ New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name SystemUsesLightTheme -Value 0 -PropertyType DWORD -Force
 #endregion
 
-#region GitExtensions
-# Pre-set GitExtension settings to prevent it from overwriting .gitconfig
-cinst gitextensions -y
-New-Item HKCU:\Software\GitExtensions -Force
-New-ItemProperty -Path HKCU:\Software\GitExtensions -Name CheckSettings -Value 'false' -Force
-New-ItemProperty -Path HKCU:\Software\GitExtensions -Name gitcommand -Value (Get-Command git | Select-Object -ExpandProperty Path) -Force
-mkdir "$($env:APPDATA)\GitExtensions\GitExtensions" -Force | Out-Null
-Copy-Item "~\.deployment\GitExtensions\GitExtensions.settings" "$($env:APPDATA)\GitExtensions\GitExtensions\GitExtensions.settings" -Force
-#endregion
-
 #region Visual Studio Code
 mkdir "$($env:APPDATA)\Code" -Force | Out-Null
 New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "~\.deployment\VSCode" -Force

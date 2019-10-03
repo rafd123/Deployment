@@ -58,6 +58,16 @@ cinst docker-desktop -y
 Install-Module DockerCompletion -Scope CurrentUser -Force
 #endregion
 
+#region GitExtensions
+# Pre-set GitExtension settings to prevent it from overwriting .gitconfig
+cinst gitextensions -y
+New-Item HKCU:\Software\GitExtensions -Force
+New-ItemProperty -Path HKCU:\Software\GitExtensions -Name CheckSettings -Value 'false' -Force
+New-ItemProperty -Path HKCU:\Software\GitExtensions -Name gitcommand -Value (Get-Command git | Select-Object -ExpandProperty Path) -Force
+mkdir "$($env:APPDATA)\GitExtensions\GitExtensions" -Force | Out-Null
+Copy-Item "~\.deployment\GitExtensions\GitExtensions.settings" "$($env:APPDATA)\GitExtensions\GitExtensions\GitExtensions.settings" -Force
+#endregion
+
 #region Visual Studio
 cinst visualstudio2017professional -y
 cinst visualstudio2017-workload-manageddesktop -y
