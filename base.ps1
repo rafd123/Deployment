@@ -181,12 +181,6 @@ New-Item -Path '~\vimfiles' -Value '~\.deployment\wsl\vim\.vim' -ItemType Symbol
 New-Item -Path '~\_vimrc' -Value '~\.deployment\wsl\vim\.vimrc' -ItemType SymbolicLink -Force
 #endregion
 
-#region vcxsrv
-cinst vcxsrv -y
-New-Item -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch" -ItemType SymbolicLink -Value "~\.deployment\VcXsrv\config.xlaunch" -Force
-Start-Process "~\.deployment\VcXsrv\config.xlaunch"
-#endregion
-
 #region Python
 cinst python3 -y
 refreshenv

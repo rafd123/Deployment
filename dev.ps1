@@ -45,6 +45,12 @@ if ($wslInstallationResult) {
 }
 #endregion
 
+#region vcxsrv
+cinst vcxsrv -y
+New-Item -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch" -ItemType SymbolicLink -Value "~\.deployment\VcXsrv\config.xlaunch" -Force
+Start-Process "~\.deployment\VcXsrv\config.xlaunch"
+#endregion
+
 #region Hyper-V
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -ErrorAction SilentlyContinue `
 | Enable-WindowsOptionalFeature -Online -NoRestart
