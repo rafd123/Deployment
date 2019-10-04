@@ -147,7 +147,7 @@ New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 #region Visual Studio Code
 mkdir "$($env:APPDATA)\Code" -Force | Out-Null
 New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "~\.deployment\VSCode" -Force
-cinst visualstudiocode -y
+cinst vscode -y
 RefreshEnv
 code --install-extension ms-vscode.PowerShell
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
