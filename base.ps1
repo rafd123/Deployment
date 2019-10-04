@@ -162,7 +162,7 @@ code --install-extension formulahendry.vscode-mysql
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension msjsdiag.vscode-react-native
-cost --install-extension jeff-hykin.code-eol
+code --install-extension jeff-hykin.code-eol
 #endregion
 
 #region Windows Sandbox
