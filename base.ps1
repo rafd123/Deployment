@@ -171,6 +171,7 @@ Get-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -E
 #endregion
 
 #region Sublime Merge
+cinst sublimemerge -y
 mkdir "$($env:APPDATA)\Sublime Merge\Packages" -Force | Out-Null
 New-Item -Path "$($env:APPDATA)\Sublime Merge\Packages\User" -ItemType SymbolicLink -Value "~\.deployment\Sublime Merge\Packages\User" -Force
 #endregion
