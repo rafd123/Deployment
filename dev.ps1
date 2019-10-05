@@ -27,7 +27,7 @@ if ($wslInstallationResult) {
         cinst lxrunoffline -y
     }
 
-    if (-not (Get-AppxPackage CanonicalGroupLimited.UbuntuonWindows -ErrorAction SilentlyContinue)) {
+    if (-not (Get-AppxPackage CanonicalGroupLimited.Ubuntu* -ErrorAction SilentlyContinue)) {
         & {
             $ProgressPreference = 'SilentlyContinue'
             Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile $env:TEMP\Ubuntu.appx -UseBasicParsing
@@ -35,7 +35,7 @@ if ($wslInstallationResult) {
 
         Add-AppxPackage -Path $env:TEMP\Ubuntu.appx
 
-        $installLocation = (Get-AppxPackage CanonicalGroupLimited.UbuntuonWindows).InstallLocation
+        $installLocation = (Get-AppxPackage CanonicalGroupLimited.Ubuntu*).InstallLocation
         New-ItemProperty `
             HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
             -Name InitWSL `
