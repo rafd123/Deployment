@@ -74,15 +74,18 @@ mkdir "$($env:APPDATA)\GitExtensions\GitExtensions" -Force | Out-Null
 Copy-Item "~\.deployment\GitExtensions\GitExtensions.settings" "$($env:APPDATA)\GitExtensions\GitExtensions\GitExtensions.settings" -Force
 #endregion
 
-#region Visual Studio
-cinst visualstudio2017professional -y
-cinst visualstudio2017-workload-manageddesktop -y
-cinst visualstudio2017-workload-netweb -y
-cinst resharper -y
-#endregion
-
 cinst nodejs -y
 cinst windbg -y
+
+#region Visual Studio
+cinst visualstudio2019community -y
+cinst visualstudio2019-workload-manageddesktop -y
+cinst visualstudio2019-workload-netweb -y
+cinst visualstudio2019-workload-universal -y
+cinst visualstudio2019-workload-netcoretools -y
+cinst dotnetcore-sdk -y
+cinst resharper -y
+#endregion
 
 Remove-Item "$([environment]::GetFolderPath('Desktop'))\*.lnk"
 Remove-Item "$([environment]::GetFolderPath('CommonDesktop'))\*.lnk"
