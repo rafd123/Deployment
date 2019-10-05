@@ -355,6 +355,12 @@
             "hidden": true,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure"
+        },
+        {
+            "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
+            "hidden": true,
+            "name": "Ubuntu-16.04",
+            "source": "Windows.Terminal.Wsl"
         }
     ],
     "schemes" :
