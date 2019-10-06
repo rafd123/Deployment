@@ -17,8 +17,9 @@ $docs = [System.Environment]::GetFolderPath('MyDocuments')
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("UseDeclaredVarsMoreThanAssignments", "desktop")]
 $desktop = [System.Environment]::GetFolderPath('Desktop')
 
+$repos = '~\source\repos'
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("UseDeclaredVarsMoreThanAssignments", "projects")]
-$projects = Join-Path $docs 'Projects'
+$projects = $repos ### Backward compat with existing scripts
 #endregion
 
 #region aliases
