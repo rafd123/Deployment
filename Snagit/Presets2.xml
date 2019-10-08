@@ -276,12 +276,12 @@
     <EnableWebcam>false</EnableWebcam>
     <StartWebcam>false</StartWebcam>
     <SelectedWebcam>
-      <DisplayName>Microsoft Camera Rear</DisplayName>
-      <DevicePath>\\?\display#int3470#4&amp;1aaa636&amp;1&amp;uid13424#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\{7c9bbcea-909c-47b3-8cf9-2aa8237e1d4b}</DevicePath>
+      <DisplayName>Microsoft Camera Front</DisplayName>
+      <DevicePath>\\?\display#int3470#4&amp;1aaa636&amp;0&amp;uid13424#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\{bf89b5a5-61f7-4127-a279-e187013d7caf}</DevicePath>
     </SelectedWebcam>
     <SelectedMicrophone>
       <DisplayName>Microphone Array (Realtek High Definition Audio(SST))</DisplayName>
-      <DevicePath>{0.0.1.00000000}.{0a1350ab-8981-4581-b97e-02ed9fe2db92}</DevicePath>
+      <DevicePath>{0.0.1.00000000}.{1aa2d447-938b-4dc1-9f7c-a99960998e9b}</DevicePath>
     </SelectedMicrophone>
     <HotKey>Snapshot</HotKey>
     <HotKeyModifiers>Control</HotKeyModifiers>
