@@ -1,370 +1,81 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "globals" :
-    {
-        "alwaysShowTabs" : true,
-        "defaultProfile" : "{ebb6754f-6742-4385-aa3c-2bda098e804d}",
-        "initialCols" : 120,
-        "initialRows" : 30,
-        "keybindings" :
-        [
-            {
-                "command" : "closePane",
-                "keys" :
-                [
-                    "ctrl+shift+w"
-                ]
-            },
-            {
-                "command" : "copy",
-                "keys" :
-                [
-                    "ctrl+shift+c"
-                ]
-            },
-            {
-                "command" : "duplicateTab",
-                "keys" :
-                [
-                    "ctrl+shift+d"
-                ]
-            },
-            {
-                "command" : "newTab",
-                "keys" :
-                [
-                    "ctrl+shift+t"
-                ]
-            },
-            {
-                "command" : "newTabProfile0",
-                "keys" :
-                [
-                    "ctrl+shift+1"
-                ]
-            },
-            {
-                "command" : "newTabProfile1",
-                "keys" :
-                [
-                    "ctrl+shift+2"
-                ]
-            },
-            {
-                "command" : "newTabProfile2",
-                "keys" :
-                [
-                    "ctrl+shift+3"
-                ]
-            },
-            {
-                "command" : "newTabProfile3",
-                "keys" :
-                [
-                    "ctrl+shift+4"
-                ]
-            },
-            {
-                "command" : "newTabProfile4",
-                "keys" :
-                [
-                    "ctrl+shift+5"
-                ]
-            },
-            {
-                "command" : "newTabProfile5",
-                "keys" :
-                [
-                    "ctrl+shift+6"
-                ]
-            },
-            {
-                "command" : "newTabProfile6",
-                "keys" :
-                [
-                    "ctrl+shift+7"
-                ]
-            },
-            {
-                "command" : "newTabProfile7",
-                "keys" :
-                [
-                    "ctrl+shift+8"
-                ]
-            },
-            {
-                "command" : "newTabProfile8",
-                "keys" :
-                [
-                    "ctrl+shift+9"
-                ]
-            },
-            {
-                "command" : "nextTab",
-                "keys" :
-                [
-                    "ctrl+tab"
-                ]
-            },
-            {
-                "command" : "openSettings",
-                "keys" :
-                [
-                    "ctrl+,"
-                ]
-            },
-            {
-                "command" : "paste",
-                "keys" :
-                [
-                    "ctrl+shift+v"
-                ]
-            },
-            {
-                "command" : "prevTab",
-                "keys" :
-                [
-                    "ctrl+shift+tab"
-                ]
-            },
-            {
-                "command" : "scrollDown",
-                "keys" :
-                [
-                    "ctrl+shift+down"
-                ]
-            },
-            {
-                "command" : "scrollDownPage",
-                "keys" :
-                [
-                    "ctrl+shift+pgdn"
-                ]
-            },
-            {
-                "command" : "scrollUp",
-                "keys" :
-                [
-                    "ctrl+shift+up"
-                ]
-            },
-            {
-                "command" : "scrollUpPage",
-                "keys" :
-                [
-                    "ctrl+shift+pgup"
-                ]
-            },
-            {
-                "command" : "splitHorizontal",
-                "keys" :
-                [
-                    "ctrl+shift+e"
-                ]
-            },
-            {
-                "command" : "switchToTab0",
-                "keys" :
-                [
-                    "ctrl+alt+1"
-                ]
-            },
-            {
-                "command" : "switchToTab1",
-                "keys" :
-                [
-                    "ctrl+alt+2"
-                ]
-            },
-            {
-                "command" : "switchToTab2",
-                "keys" :
-                [
-                    "ctrl+alt+3"
-                ]
-            },
-            {
-                "command" : "switchToTab3",
-                "keys" :
-                [
-                    "ctrl+alt+4"
-                ]
-            },
-            {
-                "command" : "switchToTab4",
-                "keys" :
-                [
-                    "ctrl+alt+5"
-                ]
-            },
-            {
-                "command" : "switchToTab5",
-                "keys" :
-                [
-                    "ctrl+alt+6"
-                ]
-            },
-            {
-                "command" : "switchToTab6",
-                "keys" :
-                [
-                    "ctrl+alt+7"
-                ]
-            },
-            {
-                "command" : "switchToTab7",
-                "keys" :
-                [
-                    "ctrl+alt+8"
-                ]
-            },
-            {
-                "command" : "switchToTab8",
-                "keys" :
-                [
-                    "ctrl+alt+9"
-                ]
-            }
-        ],
-        "requestedTheme" : "system",
-        "showTabsInTitlebar" : true,
-        "showTerminalTitleInTitlebar" : false,
-        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
-    },
-    "profiles" :
+
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+
+    "profiles":
     [
         {
-            "acrylicOpacity" : 0.5,
-            "closeOnExit" : true,
-            "colorScheme" : "RafD123 Dark",
-            "commandline" : "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoExit",
-            "cursorColor" : "#FFFFFF",
-            "cursorShape" : "bar",
+            // Make changes here to the powershell.exe profile
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe -NoLogo -NoExit",
             "fontFace" : "DejaVu Sans Mono for Powerline",
             "fontSize" : 10,
-            "guid" : "{ebb6754f-6742-4385-aa3c-2bda098e804d}",
-            "historySize" : 9001,
-            "icon" : "ms-appdata:///roaming/pwsh.png",
-            "name" : "PowerShell",
-            "padding" : "0, 0, 0, 0",
-            "scrollbarState" : "hidden",
-            "snapOnInput" : true,
-            "startingDirectory" : "%USERPROFILE%",
-            "useAcrylic" : false
+            "colorScheme" : "RafD123 Dark",
+            "icon" : "ms-appdata:///local/pwsh.png",
+            "scrollbarState": "hidden",
+            "hidden": false
         },
         {
-            "acrylicOpacity" : 0.5,
-            "closeOnExit" : true,
-            "colorScheme" : "RafD123 Dark",
-            "commandline" : "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoExit -Command Start-GameraServer",
-            "cursorColor" : "#FFFFFF",
-            "cursorShape" : "bar",
+            // Make changes here to the powershell.exe profile
+            "guid": "{16c11b52-0a7c-4bea-b942-d705b84f4c0e}",
+            "name": "Gamera",
+            "commandline": "powershell.exe -NoLogo -NoExit -Command Start-GameraServer",
             "fontFace" : "DejaVu Sans Mono for Powerline",
             "fontSize" : 10,
-            "guid" : "{5ffd218a-20a1-491d-9674-7038f59492de}",
-            "historySize" : 9001,
-            "icon" : "ms-appdata:///roaming/gamera.ico",
-            "name" : "Gamera",
-            "padding" : "0, 0, 0, 0",
-            "scrollbarState" : "hidden",
-            "snapOnInput" : true,
-            "startingDirectory" : "%USERPROFILE%",
-            "useAcrylic" : false
-        },
-        {
-            "acrylicOpacity" : 0.5,
-            "closeOnExit" : true,
             "colorScheme" : "RafD123 Dark",
-            "commandline" : "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoExit -Command Start-MothraServer",
-            "cursorColor" : "#FFFFFF",
-            "cursorShape" : "bar",
-            "fontFace" : "DejaVu Sans Mono for Powerline",
-            "fontSize" : 10,
-            "guid" : "{076ab6d5-e1da-465c-8333-c39f9970770d}",
-            "historySize" : 9001,
-            "icon" : "ms-appdata:///roaming/mothra.png",
-            "name" : "Mothra",
-            "padding" : "0, 0, 0, 0",
-            "scrollbarState" : "hidden",
-            "snapOnInput" : true,
-            "startingDirectory" : "%USERPROFILE%",
-            "useAcrylic" : false
-        },
-        {
-            "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-            "hidden": true,
-            "name": "PowerShell Core",
-            "source": "Windows.Terminal.PowershellCore"
-        },
-        {
-            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-            "hidden": true,
-            "name": "Ubuntu",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{c7ef4ce6-d1d0-5897-945c-76721be7e68c}",
-            "hidden": true,
-            "name": "mandrake",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-            "hidden": true,
-            "name": "Debian",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{28fc8567-4f1e-5f4f-9ea0-0880dedd0df8}",
-            "hidden": true,
-            "name": "ollo-server",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{773eb8b3-e977-5337-b7cf-d2fc4f346ff6}",
-            "hidden": true,
-            "name": "kaldi",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{a0c74c04-8474-504a-96d2-e91f751b3e73}",
-            "hidden": true,
-            "name": "kalera",
-            "source": "Windows.Terminal.Wsl"
-        },
-        {
-            "guid": "{93963f34-d8d9-5cb3-a1ec-f66524fb2ff0}",
-            "hidden": true,
-            "name": "gee",
-            "source": "Windows.Terminal.Wsl"
+            "icon" : "ms-appdata:///local/gamera.ico",
+            "scrollbarState": "hidden",
+            "hidden": false
         },
         {
             "guid": "{1b9f3b4a-3bca-5292-98e9-5a39da69449f}",
-            "hidden": true,
+            "hidden": false,
             "name": "mothra",
+            "commandline" : "powershell.exe -NoLogo -NoExit -Command Start-MothraServer",
+            "icon" : "ms-appdata:///local/mothra.png",
+            "fontFace" : "DejaVu Sans Mono for Powerline",
+            "fontSize" : 10,
+            "scrollbarState": "hidden",
             "source": "Windows.Terminal.Wsl"
         },
         {
-            "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-            "hidden": true,
-            "name": "Ubuntu-18.04",
+            // Make changes here to the cmd.exe profile
+            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "name": "cmd",
+            "commandline": "cmd.exe",
+            "fontFace" : "DejaVu Sans Mono for Powerline",
+            "fontSize" : 10,
+            "scrollbarState": "hidden",
+            "hidden": false
+        },
+        {
+            "guid": "{a0c74c04-8474-504a-96d2-e91f751b3e73}",
+            "hidden": false,
+            "name": "kalera",
+            "fontFace" : "DejaVu Sans Mono for Powerline",
+            "fontSize" : 10,
+            "scrollbarState": "hidden",
             "source": "Windows.Terminal.Wsl"
         },
         {
             "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
             "hidden": true,
             "name": "Azure Cloud Shell",
+            "fontFace" : "DejaVu Sans Mono for Powerline",
+            "fontSize" : 10,
+            "scrollbarState": "hidden",
             "source": "Windows.Terminal.Azure"
-        },
-        {
-            "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
-            "hidden": true,
-            "name": "Ubuntu-16.04",
-            "source": "Windows.Terminal.Wsl"
         }
     ],
-    "schemes" :
-    [
+
+    // Add custom color schemes to this array
+    "schemes": [
         {
             "background" : "#171717",
             "black" : "#282C34",
@@ -385,153 +96,18 @@
             "red" : "#E06C75",
             "white" : "#DCDFE4",
             "yellow" : "#E5C07B"
-        },
+        }
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
         {
-            "background" : "#1E1E1E",
-            "black" : "#282C34",
-            "blue" : "#61AFEF",
-            "brightBlack" : "#5A6374",
-            "brightBlue" : "#61AFEF",
-            "brightCyan" : "#56B6C2",
-            "brightGreen" : "#98C379",
-            "brightPurple" : "#C678DD",
-            "brightRed" : "#E06C75",
-            "brightWhite" : "#DCDFE4",
-            "brightYellow" : "#E5C07B",
-            "cyan" : "#56B6C2",
-            "foreground" : "#DCDFE4",
-            "green" : "#98C379",
-            "name" : "## Original RafD123 Dark",
-            "purple" : "#C678DD",
-            "red" : "#E06C75",
-            "white" : "#DCDFE4",
-            "yellow" : "#E5C07B"
-        },
-        {
-            "background" : "#0C0C0C",
-            "black" : "#0C0C0C",
-            "blue" : "#0037DA",
-            "brightBlack" : "#767676",
-            "brightBlue" : "#3B78FF",
-            "brightCyan" : "#61D6D6",
-            "brightGreen" : "#16C60C",
-            "brightPurple" : "#B4009E",
-            "brightRed" : "#E74856",
-            "brightWhite" : "#F2F2F2",
-            "brightYellow" : "#F9F1A5",
-            "cyan" : "#3A96DD",
-            "foreground" : "#CCCCCC",
-            "green" : "#13A10E",
-            "name" : "Campbell",
-            "purple" : "#881798",
-            "red" : "#C50F1F",
-            "white" : "#CCCCCC",
-            "yellow" : "#C19C00"
-        },
-        {
-            "background" : "#000000",
-            "black" : "#000000",
-            "blue" : "#000080",
-            "brightBlack" : "#808080",
-            "brightBlue" : "#0000FF",
-            "brightCyan" : "#00FFFF",
-            "brightGreen" : "#00FF00",
-            "brightPurple" : "#FF00FF",
-            "brightRed" : "#FF0000",
-            "brightWhite" : "#FFFFFF",
-            "brightYellow" : "#FFFF00",
-            "cyan" : "#008080",
-            "foreground" : "#C0C0C0",
-            "green" : "#008000",
-            "name" : "Vintage",
-            "purple" : "#800080",
-            "red" : "#800000",
-            "white" : "#C0C0C0",
-            "yellow" : "#808000"
-        },
-        {
-            "background" : "#282C34",
-            "black" : "#282C34",
-            "blue" : "#61AFEF",
-            "brightBlack" : "#5A6374",
-            "brightBlue" : "#61AFEF",
-            "brightCyan" : "#56B6C2",
-            "brightGreen" : "#98C379",
-            "brightPurple" : "#C678DD",
-            "brightRed" : "#E06C75",
-            "brightWhite" : "#DCDFE4",
-            "brightYellow" : "#E5C07B",
-            "cyan" : "#56B6C2",
-            "foreground" : "#DCDFE4",
-            "green" : "#98C379",
-            "name" : "One Half Dark",
-            "purple" : "#C678DD",
-            "red" : "#E06C75",
-            "white" : "#DCDFE4",
-            "yellow" : "#E5C07B"
-        },
-        {
-            "background" : "#FAFAFA",
-            "black" : "#383A42",
-            "blue" : "#0184BC",
-            "brightBlack" : "#4F525D",
-            "brightBlue" : "#61AFEF",
-            "brightCyan" : "#56B5C1",
-            "brightGreen" : "#98C379",
-            "brightPurple" : "#C577DD",
-            "brightRed" : "#DF6C75",
-            "brightWhite" : "#FFFFFF",
-            "brightYellow" : "#E4C07A",
-            "cyan" : "#0997B3",
-            "foreground" : "#383A42",
-            "green" : "#50A14F",
-            "name" : "One Half Light",
-            "purple" : "#A626A4",
-            "red" : "#E45649",
-            "white" : "#FAFAFA",
-            "yellow" : "#C18301"
-        },
-        {
-            "background" : "#002B36",
-            "black" : "#073642",
-            "blue" : "#268BD2",
-            "brightBlack" : "#002B36",
-            "brightBlue" : "#839496",
-            "brightCyan" : "#93A1A1",
-            "brightGreen" : "#586E75",
-            "brightPurple" : "#6C71C4",
-            "brightRed" : "#CB4B16",
-            "brightWhite" : "#FDF6E3",
-            "brightYellow" : "#657B83",
-            "cyan" : "#2AA198",
-            "foreground" : "#839496",
-            "green" : "#859900",
-            "name" : "Solarized Dark",
-            "purple" : "#D33682",
-            "red" : "#DC322F",
-            "white" : "#EEE8D5",
-            "yellow" : "#B58900"
-        },
-        {
-            "background" : "#FDF6E3",
-            "black" : "#073642",
-            "blue" : "#268BD2",
-            "brightBlack" : "#002B36",
-            "brightBlue" : "#839496",
-            "brightCyan" : "#93A1A1",
-            "brightGreen" : "#586E75",
-            "brightPurple" : "#6C71C4",
-            "brightRed" : "#CB4B16",
-            "brightWhite" : "#FDF6E3",
-            "brightYellow" : "#657B83",
-            "cyan" : "#2AA198",
-            "foreground" : "#657B83",
-            "green" : "#859900",
-            "name" : "Solarized Light",
-            "purple" : "#D33682",
-            "red" : "#DC322F",
-            "white" : "#EEE8D5",
-            "yellow" : "#B58900"
+            "command" : "splitHorizontal",
+            "keys" :
+            [
+                "ctrl+shift+e"
+            ]
         }
     ]
 }
