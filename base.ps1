@@ -163,6 +163,7 @@ code --install-extension ms-azuretools.vscode-docker
 code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension msjsdiag.vscode-react-native
 code --install-extension jeff-hykin.code-eol
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 #endregion
 
 #region Windows Sandbox
