@@ -11,6 +11,10 @@ if (-not $isAdmin) {
 }
 
 $DeploymentDirectory = $PSScriptRoot
+if ($target = Get-ChildItem $DeploymentDirectory | Select-Object -ExpandProperty Target) {
+    $DeploymentDirectory = $target
+}
+
 New-Item -Path "~/.deployment" -ItemType SymbolicLink -Value $DeploymentDirectory -Force
 
 #region .gitconfig
