@@ -1,8 +1,8 @@
 $texteditors = @(
     "$($env:LOCALAPPDATA)\Programs\Microsoft VS Code\bin\code.cmd"
-    "$($env:programfiles)\Sublime Text 3\sublime_text.exe"
     "$($env:programfiles)\Microsoft VS Code\bin\code.cmd"
     "${env:ProgramFiles(x86)}\Microsoft VS Code\bin\code.cmd"
+    "$($env:programfiles)\Sublime Text 3\sublime_text.exe"
     "$($env:programfiles)\Notepad++\notepad++.exe"
     "${env:ProgramFiles(x86)}\Notepad++\notepad++.exe"
     "$($env:programfiles)\TextPad 5\TextPad.exe"
