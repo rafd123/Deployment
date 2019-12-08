@@ -207,6 +207,7 @@ New-Item -Path "$($env:APPDATA)\VeraCrypt\Configuration.xml" -ItemType SymbolicL
 cinst veracrypt -y
 #endregion
 
+cinst powertoys -y
 cinst GoogleChrome -y
 cinst microsoft-edge-insider -y
 cinst edgedeflector -y
