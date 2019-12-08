@@ -6,7 +6,7 @@
 
   "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
 
-  "alwaysShowTabs": true,
+  "alwaysShowTabs": false,
   "showTabsInTitlebar": false,
   "showTerminalTitleInTitlebar": false,
 
@@ -55,7 +55,7 @@
       "fontFace": "DejaVu Sans Mono for Powerline",
       "fontSize": 10,
       "scrollbarState": "hidden",
-      "hidden": false
+      "hidden": true
     },
     {
       "guid": "{a0c74c04-8474-504a-96d2-e91f751b3e73}",
