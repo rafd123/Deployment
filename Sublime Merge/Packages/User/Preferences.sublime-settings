@@ -8,6 +8,7 @@
 		"Twilio"
 	],
 	"diff_style": "auto",
+	"expand_merge_commits_by_default": true,
 	"hide_menu": true,
 	"theme": "Merge Dark.sublime-theme",
 	"word_wrap": false
