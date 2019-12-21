@@ -31,6 +31,7 @@
   },
   "cSpell.userWords": [
     "Dropdown",
+    "Kalera",
     "Matlab",
     "Transpiles",
     "Unmount",
@@ -45,6 +46,8 @@
     "datasources",
     "deserialize",
     "firestore",
+    "fontawesome",
+    "fortawesome",
     "hycube",
     "javacript",
     "jsonb",
