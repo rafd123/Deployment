@@ -1,7 +1,7 @@
 
 # Replace-FileString.ps1
 # Written by Bill Stewart (bstewart@iname.com)
-# Modified by Matthew Steeples (matthew@mercuryit.co.uk) to enable using the 
+# Modified by Matthew Steeples (matthew@mercuryit.co.uk) to enable using the
 # -Recurse flag on Get-ChildItem and piping in
 #
 # Replaces strings in files using a regular expression. Supports
@@ -96,7 +96,7 @@ param(
     [String] [AllowEmptyString()] $Replacement,
   [parameter(Mandatory=$TRUE,ParameterSetName="Path",
     Position=2,ValueFromPipeline=$TRUE, ValueFromPipelineByPropertyName=$TRUE)]
-    
+
     [String[]] $FullName,
   [parameter(Mandatory=$TRUE,ParameterSetName="LiteralPath",
     Position=2)]
@@ -227,7 +227,7 @@ process {
         If ($text -ne $replace)
         {
             write-verbose "Writing '$tempname'."
-        
+
             [IO.File]::WriteAllText("$tempname", $regex.Replace($text,
               $Replacement), [Text.Encoding]::$Encoding)
             write-verbose "Finished writing '$tempname'."
