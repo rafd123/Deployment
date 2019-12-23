@@ -93,7 +93,7 @@ param(
   [parameter(Mandatory=$TRUE,Position=0)]
     [String] $Pattern,
   [parameter(Mandatory=$TRUE,Position=1)]
-    [String] [AllowEmptyString()] $Replacement,
+    [AllowEmptyString()] $Replacement,
   [parameter(Mandatory=$TRUE,ParameterSetName="Path",
     Position=2,ValueFromPipeline=$TRUE, ValueFromPipelineByPropertyName=$TRUE)]
 
@@ -216,7 +216,7 @@ process {
       # If -Overwrite not specified, output the result of the Replace
       # method and continue to the next file.
       if (-not $Overwrite) {
-        Out-Host $replace
+        Write-Output $replace
         continue
       }
 
