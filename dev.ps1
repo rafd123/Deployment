@@ -85,6 +85,7 @@ cinst visualstudio2019-workload-universal -y
 cinst visualstudio2019-workload-netcoretools -y
 cinst dotnetcore-sdk -y
 cinst resharper -y
+cinst clockify -y
 #endregion
 
 Remove-Item "$([environment]::GetFolderPath('Desktop'))\*.lnk"
