@@ -74,6 +74,12 @@
       "fontSize": 10,
       "scrollbarState": "hidden",
       "source": "Windows.Terminal.Azure"
+    },
+    {
+        "guid": "{75def201-4efb-5e32-93a0-c5647120c025}",
+        "hidden": true,
+        "name": "ubuntu",
+        "source": "Windows.Terminal.Wsl"
     }
   ],
 
