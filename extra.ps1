@@ -27,11 +27,15 @@ if(-not $isAdmin) {
 # # https://github.com/react-community/create-react-native-app/issues/60#issuecomment-287081523
 #endregion
 
-# cinst pgadmin4 -y
 # cinst crashplanpro -y
 # cinst octave -y
 # cinst virtualbox -y
 # cinst shotcut -y (prefer Davinci Resolve over this...Davinci doesn't have a choco package)
+
+#region pgadmin4
+# cinst pgadmin4 -y
+# New-Item -Path "${env:ProgramFiles(x86)}\pgAdmin 4\v4\web\config_local.py" -ItemType SymbolicLink -Value "~\.deployment\pgadmin\config_local.py" -Force
+#endregion
 
 #region ruby
 # cinst ruby -version 2.2.4 -y # this is the max version that works with nokogiri
