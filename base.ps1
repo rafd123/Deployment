@@ -134,6 +134,11 @@ Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name ForegroundFlashCount 
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad' -Name ThreeFingerTapEnabled -Value 65535
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad' -Name CustomThreeFingerTap -Value 5
 
+# Razer touchpad tweaks. See https://www.reddit.com/r/razer/comments/cl7atz/razer_touchpad_palm_rejection_tweaking/ey8zi5e/
+if ((Get-WmiObject -Class Win32_ComputerSystem).Manufacturer -eq 'Razer') {
+    reg import "$DeploymentDirectory\Razer\touchpad.reg"
+}
+
 Get-Process explorer | Stop-Process -Force
 #endregion
 
