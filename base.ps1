@@ -61,6 +61,11 @@ Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShe
 Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\"
 #endregion
 
+# Allow MSBuild, PowerShell, etc to work with long file paths by default.
+# See https://github.com/Microsoft/msbuild/issues/53#issuecomment-459062618 and
+# https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/
+New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name LongPathsEnabled  -Value 1 -PropertyType DWORD -Force
+
 #region Terminal
 cinst microsoft-windows-terminal -y
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
