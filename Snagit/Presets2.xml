@@ -281,7 +281,7 @@
     </SelectedWebcam>
     <SelectedMicrophone>
       <DisplayName>Microphone Array (Realtek High Definition Audio(SST))</DisplayName>
-      <DevicePath>{0.0.1.00000000}.{1aa2d447-938b-4dc1-9f7c-a99960998e9b}</DevicePath>
+      <DevicePath>{0.0.1.00000000}.{6782ce61-549f-4548-97a6-c5ab63365030}</DevicePath>
     </SelectedMicrophone>
     <HotKey>Snapshot</HotKey>
     <HotKeyModifiers>Control</HotKeyModifiers>
