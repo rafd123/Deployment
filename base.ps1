@@ -219,7 +219,7 @@ cinst veracrypt -y
 
 cinst powertoys -y
 cinst GoogleChrome -y
-cinst microsoft-edge-insider -y
+cinst microsoft-edge -y
 cinst edgedeflector -y
 cinst beyondcompare -y
 cinst sysinternals -y
