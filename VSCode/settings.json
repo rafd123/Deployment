@@ -133,7 +133,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.newWindowDimensions": "inherit",
-  "search.location": "sidebar",
   "editor.renderWhitespace": "all",
   "remote.WSL.fileWatcher.polling": true,
   "remote.containers.defaultExtensions": [
@@ -145,5 +144,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "java.configuration.checkProjectSettingsExclusions": false,
-  "[elixir]": {}
+  "[elixir]": {},
+  "csharp.referencesCodeLens.enabled": false,
+  "workbench.sideBar.location": "left"
 }
