@@ -6,8 +6,8 @@
 
   "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
 
-  "alwaysShowTabs": true,
-  "showTabsInTitlebar": true,
+  "alwaysShowTabs": false,
+  "showTabsInTitlebar": false,
   "showTerminalTitleInTitlebar": false,
 
   "profiles": [
@@ -20,6 +20,10 @@
       "fontSize": 10,
       "colorScheme": "RafD123 Dark",
       "icon": "ms-appdata:///local/pwsh.png",
+      "backgroundImage": "ms-appdata:///local/PowerShell_logo.png",
+      "backgroundImageOpacity": 0.2,
+      "backgroundImageAlignment": "bottomRight",
+      "backgroundImageStretchMode": "none",
       "scrollbarState": "hidden",
       "hidden": false
     },
