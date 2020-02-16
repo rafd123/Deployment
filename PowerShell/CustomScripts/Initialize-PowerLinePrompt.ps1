@@ -1,6 +1,6 @@
-# if ($env:VSCODE_PID) {
-#   return
-# }
+if ($env:VSAPPIDNAME) {
+  return
+}
 
 Import-Module PowerLine
 
