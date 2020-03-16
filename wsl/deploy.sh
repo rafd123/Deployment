@@ -61,6 +61,9 @@ apt-get install git -y
 apt-get install mc -y
 apt-get install screenfetch --fix-missing -y
 
+curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+chmod +x /usr/local/bin/docker-compose
+
 ~/.deployment/wsl/tmux/tmux_build_from_source.sh
 
 #region tldr
