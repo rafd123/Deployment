@@ -145,5 +145,8 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "[elixir]": {},
   "csharp.referencesCodeLens.enabled": false,
-  "workbench.sideBar.location": "left"
+  "workbench.sideBar.location": "left",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 }
