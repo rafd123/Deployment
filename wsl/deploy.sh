@@ -34,6 +34,7 @@ cp -f ~/.deployment/git/.gitconfig ~/.gitconfig
 
 ln -sf ~/.deployment/git/.gitconfig_common ~/.gitconfig_common.xplat
 ln -sf ~/.deployment/git/linux/.gitconfig_common ~/.gitconfig_common.plat
+ln -sf ~/.deployment/git/linux/git-credential-manager /usr/bin/git-credential-manager
 
 echo "[automount]
 options = "metadata"
