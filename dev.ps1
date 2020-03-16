@@ -13,8 +13,7 @@ if(-not $isAdmin) {
 . $PSScriptRoot\base.ps1
 
 #region WSL
-$wslInstallationResult = Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -ErrorAction SilentlyContinue `
-| Enable-WindowsOptionalFeature -Online -NoRestart
+$wslInstallationResult = Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -Online -NoRestart
 
 if ($wslInstallationResult) {
     if ($wslInstallationResult.RestartNeeded) {
