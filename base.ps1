@@ -31,14 +31,18 @@ Set-Service ssh-agent -StartupType Automatic
 #endregion
 
 #region PowerShell
-$PowerShellDirectory = Split-Path $profile
-if (Get-Item $PowerShellDirectory -ErrorAction SilentlyContinue | Where-Object { -not $_.LinkType }) {
-    Rename-Item $PowerShellDirectory "$PowerShellDirectory.backup"
+@('PowerShell','WindowsPowerShell') `
+| ForEach-Object {
+    $powerShellDirectory = Join-Path ([System.Environment]::GetFolderPath('MyDocuments')) $_
+    if (Get-Item $powerShellDirectory -ErrorAction SilentlyContinue | Where-Object { -not $_.LinkType }) {
+        Rename-Item $powerShellDirectory "$powerShellDirectory.backup"
+    }
+    New-Item -Path $PowerShellDirectory -ItemType SymbolicLink -Value "~\.deployment\PowerShell" -Force
+    # For some reason, the link gets created all lower case; fix the case by renaming
+    Rename-Item $powerShellDirectory "$powerShellDirectory.1"
+    Rename-Item "$powerShellDirectory.1" $powerShellDirectory
 }
-New-Item -Path $PowerShellDirectory -ItemType SymbolicLink -Value "~\.deployment\PowerShell" -Force
-# For some reason, the link gets created all lower case; fix the case by renaming
-Rename-Item $PowerShellDirectory "$PowerShellDirectory.1"
-Rename-Item "$PowerShellDirectory.1" $PowerShellDirectory
+
 
 $shellApp = New-Object -ComObject shell.application
 $fonts = $shellApp.NameSpace(0x14)
@@ -67,6 +71,7 @@ Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft
 New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name LongPathsEnabled  -Value 1 -PropertyType DWORD -Force
 
 #region Terminal
+cinst powershell-core -y
 cinst microsoft-windows-terminal -y
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force

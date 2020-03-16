@@ -4,13 +4,28 @@
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
 
-  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
 
   "alwaysShowTabs": false,
   "showTabsInTitlebar": false,
   "showTerminalTitleInTitlebar": false,
 
   "profiles": [
+    {
+      "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+      "hidden": false,
+      "name": "PowerShell",
+      "source": "Windows.Terminal.PowershellCore",
+      "fontFace": "DejaVu Sans Mono for Powerline",
+      "fontSize": 10,
+      "colorScheme": "RafD123 Dark",
+      // "backgroundImage": "ms-appdata:///local/PowerShell_logo.png",
+      "backgroundImageOpacity": 0.2,
+      "backgroundImageAlignment": "bottomRight",
+      "backgroundImageStretchMode": "none",
+      "scrollbarState": "hidden",
+      "padding": "0, 0, 0, 0"
+    },
     {
       // Make changes here to the powershell.exe profile
       "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -20,36 +35,13 @@
       "fontSize": 10,
       "colorScheme": "RafD123 Dark",
       "icon": "ms-appdata:///local/pwsh.png",
-      "backgroundImage": "ms-appdata:///local/PowerShell_logo.png",
+      // "backgroundImage": "ms-appdata:///local/PowerShell_logo.png",
       "backgroundImageOpacity": 0.2,
       "backgroundImageAlignment": "bottomRight",
       "backgroundImageStretchMode": "none",
       "scrollbarState": "hidden",
-      "hidden": false
-    },
-    {
-      // Make changes here to the powershell.exe profile
-      "guid": "{16c11b52-0a7c-4bea-b942-d705b84f4c0e}",
-      "name": "Gamera",
-      "commandline": "powershell.exe -NoLogo -NoExit -Command Start-GameraServer",
-      "fontFace": "DejaVu Sans Mono for Powerline",
-      "fontSize": 10,
-      "colorScheme": "RafD123 Dark",
-      "icon": "ms-appdata:///local/gamera.ico",
-      "scrollbarState": "hidden",
-      "hidden": false
-    },
-    {
-      "guid": "{1b9f3b4a-3bca-5292-98e9-5a39da69449f}",
-      "hidden": false,
-      "name": "mothra",
-      "commandline": "powershell.exe -NoLogo -NoExit -Command Start-MothraServer",
-      "icon": "ms-appdata:///local/mothra.png",
-      "fontFace": "DejaVu Sans Mono for Powerline",
-      "fontSize": 10,
-      "colorScheme": "RafD123 Dark",
-      "scrollbarState": "hidden",
-      "source": "Windows.Terminal.Wsl"
+      "hidden": true,
+      "padding": "0, 0, 0, 0"
     },
     {
       // Make changes here to the cmd.exe profile
@@ -64,6 +56,7 @@
     {
       "guid": "{a0c74c04-8474-504a-96d2-e91f751b3e73}",
       "hidden": false,
+      "padding": "0, 0, 0, 0",
       "name": "kalera",
       "fontFace": "DejaVu Sans Mono for Powerline",
       "fontSize": 10,
@@ -84,6 +77,18 @@
       "hidden": true,
       "name": "ubuntu",
       "source": "Windows.Terminal.Wsl"
+    },
+    {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl"
+    },
+    {
+        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+        "hidden": false,
+        "name": "Ubuntu-18.04",
+        "source": "Windows.Terminal.Wsl"
     }
   ],
 
