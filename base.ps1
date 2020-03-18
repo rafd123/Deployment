@@ -56,6 +56,7 @@ if ($installedFontNames -notcontains 'DejaVu Sans Mono for Powerline') {
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module PowerLine -Scope CurrentUser -AllowClobber -Force
 Install-Module posh-git -Scope CurrentUser -AllowClobber -Force
+Install-Module oh-my-posh -Scope CurrentUser -AllowClobber -Force
 Install-Module z -Scope CurrentUser -AllowClobber -Force
 Install-Module DirColors -Scope CurrentUser -Force
 
