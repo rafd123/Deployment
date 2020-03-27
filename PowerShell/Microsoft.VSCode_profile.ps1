@@ -1,2 +1,2 @@
-# Initialize-PowerLinePrompt
-Set-Theme RafD123
+Initialize-PowerLinePrompt
+# Set-Theme RafD123

@@ -6,8 +6,8 @@ Import-Module PowerLine
 
 $global:PowerLinePromptConfig = New-Object psobject -Property @{
   FullColor = $true
-  DefaulLightBackground = '#AAAAAA'
-  DefaulDarkBackground = '#444444'
+  DefaultLightBackground = '#AAAAAA'
+  DefaultDarkBackground = '#444444'
   Git = New-Object psobject -Property @{
     HideZero = $True
     Branch = New-Object psobject -Property (@{
@@ -43,8 +43,8 @@ $global:PowerLinePromptConfig = New-Object psobject -Property @{
 
 # if ($env:TERM_PROGRAM -eq 'Hyper' -or $env:SESSIONNAME -ne 'Console') {
 #   $PowerLinePromptConfig.FullColor = $false
-#   $PowerLinePromptConfig.DefaulLightBackground = 'Gray'
-#   $PowerLinePromptConfig.DefaulDarkBackground = 'DarkGray'
+#   $PowerLinePromptConfig.DefaultLightBackground = 'Gray'
+#   $PowerLinePromptConfig.DefaultDarkBackground = 'DarkGray'
 #   $PowerLinePromptConfig.Git.Branch.Background = 'DarkMagenta'
 #   $PowerLinePromptConfig.Git.Identical.Background = 'DarkMagenta'
 #   $PowerLinePromptConfig.Git.BehindBy.Background = 'Red'
@@ -113,18 +113,20 @@ function global:Write-PowerLineGitStatus {
     }
 }
 
+$global:PromptPadCharacter = '&#x2000;'
+
 function global:pad {
-  process { $_.Object = " $($_.Object) "; $_ }
+  process { $_.Object = "$PromptPadCharacter$($_.Object)$PromptPadCharacter"; $_ }
 }
 
 $env:VIRTUAL_ENV_DISABLE_PROMPT=1
 
 $global:Prompt = @(
-    { "`n" + (New-PromptText " $($MyInvocation.HistoryId) " -BackgroundColor $PowerLinePromptConfig.DefaulLightBackground) }
-    { Get-SegmentedPath -BackgroundColor $PowerLinePromptConfig.DefaulDarkBackground | pad }
+    { New-Text "`n$PromptPadCharacter$($MyInvocation.HistoryId)$PromptPadCharacter" -BackgroundColor $PowerLinePromptConfig.DefaultLightBackground}
+    { Get-SegmentedPath -BackgroundColor $PowerLinePromptConfig.DefaultDarkBackground | pad }
     { Write-PowerLineGitStatus | pad }
     { "`n" }
-    { New-PromptText " PS " -ForegroundColor 'Black' -BackgroundColor (& { if (Test-Elevation) { "Red" } else { 'DarkGray' } }) }
+    { New-Text "PS" -ForegroundColor 'Black' -BackgroundColor (& { if (Test-Elevation) { "Red" } else { 'DarkGray' } }) | pad }
     {
       if (-not ($env:VIRTUAL_ENV)) {
         return
@@ -132,12 +134,12 @@ $global:Prompt = @(
 
       $venv = Split-Path $env:VIRTUAL_ENV -Leaf
 
-      New-PromptText " &#x2622; $venv &#x2622; " -BackgroundColor 'Yellow' -ForegroundColor 'Black'
+      New-Text "&#x2622; $venv &#x2622;" -BackgroundColor 'Yellow' -ForegroundColor 'Black' | pad
     }
 )
 
 $colors = [System.Collections.Generic.List[PoshCode.Pansies.RgbColor]]::new()
-$colors.Add([PoshCode.Pansies.RgbColor]$PowerLinePromptConfig.DefaulLightBackground)
-$colors.Add([PoshCode.Pansies.RgbColor]$PowerLinePromptConfig.DefaulDarkBackground)
+$colors.Add([PoshCode.Pansies.RgbColor]$PowerLinePromptConfig.DefaultLightBackground)
+$colors.Add([PoshCode.Pansies.RgbColor]$PowerLinePromptConfig.DefaultDarkBackground)
 
 Set-PowerLinePrompt -FullColor:$PowerLinePromptConfig.FullColor -PowerLineFont -RestoreVirtualTerminal -Colors $colors
