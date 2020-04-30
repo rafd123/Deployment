@@ -31,6 +31,7 @@ Set-Service ssh-agent -StartupType Automatic
 #endregion
 
 #region PowerShell
+cinst powershell-core -y
 @('PowerShell','WindowsPowerShell') `
 | ForEach-Object {
     $powerShellDirectory = Join-Path ([System.Environment]::GetFolderPath('MyDocuments')) $_
@@ -72,7 +73,6 @@ Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft
 New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name LongPathsEnabled  -Value 1 -PropertyType DWORD -Force
 
 #region Terminal
-cinst powershell-core -y
 cinst microsoft-windows-terminal -y
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force
