@@ -75,11 +75,11 @@ ln -sf ~/.deployment/wsl/powerline-shell/text.py /usr/local/lib/python3.6/dist-p
 # apt-get install sublime-text -y
 # #endregion
 
-# echo "[automount]
-# options = "metadata"
-# " > /etc/wsl.conf
+echo "[automount]
+options = "metadata"
+" > /etc/wsl.conf
 
-# ln -sf $WIN_HOMEPATH/.ssh ~/.ssh
+ln -sf $WIN_HOMEPATH/.ssh ~/.ssh
 # mkdir -p /mnt/tmp
 # mount -t drvfs C: /mnt/tmp -o metadata
 # chown $SUDO_USER /mnt/tmp$WIN_HOMEPATHBASE/.ssh /mnt/tmp$WIN_HOMEPATHBASE/.ssh/*
