@@ -123,3 +123,37 @@ function tmux {
     }
 }
 #endregion
+
+#region ssh
+Register-ArgumentCompleter -Native -CommandName ssh -ScriptBlock {
+    param(
+        $WordToComplete,
+        $CommandAst,
+        $CursorPosition
+    )
+
+    if (($commandAst.CommandElements.Count -eq 1) -or
+        ($commandAst.CommandElements.Count -eq 2 -and $WordToComplete)) {
+        Get-Content ~\.ssh\config `
+            | Where-Object { $_ -match '^Host (.*)$' } `
+            | ForEach-Object { $Matches[1] }
+            | Where-Object { $_ -ne '*' }
+            | Sort-Object
+            | Where-Object { $_ -like "$WordToComplete*" }
+    }
+}
+#endregion
+
+#region dotnet
+Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
+    param(
+        $WordToComplete,
+        $CommandAst,
+        $CursorPosition
+    )
+
+    dotnet complete --position $CursorPosition $CommandAst.ToString() | ForEach-Object {
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+    }
+}
+#endregion
