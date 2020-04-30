@@ -10,6 +10,8 @@ if (-not $isAdmin) {
     return
 }
 
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
 $DeploymentDirectory = $PSScriptRoot
 if ($target = Get-ChildItem $DeploymentDirectory | Select-Object -ExpandProperty Target) {
     $DeploymentDirectory = $target
@@ -23,22 +25,21 @@ if (-not (Test-Path "$HOME\.gitconfig")) {
     Copy-Item "$DeploymentDirectory\git\.gitconfig" ~\.gitconfig
 }
 
-New-Item -Path "~\.gitconfig_common.xplat" -ItemType SymbolicLink -Value "~\.deployment\git\.gitconfig_common" -Force
-New-Item -Path "~\.gitconfig_common.plat" -ItemType SymbolicLink -Value "~\.deployment\git\windows\.gitconfig_common" -Force
+New-Item -Path "~\.gitconfig_common.xplat" -ItemType SymbolicLink -Value "$DeploymentDirectory\git\.gitconfig_common" -Force
+New-Item -Path "~\.gitconfig_common.plat" -ItemType SymbolicLink -Value "$DeploymentDirectory\git\windows\.gitconfig_common" -Force
 mkdir ~\.ssh -Force
 Out-File -InputObject '' ~\.ssh\placeholder
 Set-Service ssh-agent -StartupType Automatic
 #endregion
 
 #region PowerShell
-cinst powershell-core -y
 @('PowerShell','WindowsPowerShell') `
 | ForEach-Object {
     $powerShellDirectory = Join-Path ([System.Environment]::GetFolderPath('MyDocuments')) $_
     if (Get-Item $powerShellDirectory -ErrorAction SilentlyContinue | Where-Object { -not $_.LinkType }) {
         Rename-Item $powerShellDirectory "$powerShellDirectory.backup"
     }
-    New-Item -Path $PowerShellDirectory -ItemType SymbolicLink -Value "~\.deployment\PowerShell" -Force
+    New-Item -Path $PowerShellDirectory -ItemType SymbolicLink -Value "$DeploymentDirectory\PowerShell" -Force
     # For some reason, the link gets created all lower case; fix the case by renaming
     Rename-Item $powerShellDirectory "$powerShellDirectory.1"
     Rename-Item "$powerShellDirectory.1" $powerShellDirectory
@@ -64,7 +65,7 @@ Install-Module DirColors -Scope CurrentUser -Force
 Remove-Item HKCU:\Console -Recurse
 reg import "$HOME\.deployment\Console\console.reg"
 Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\*"
-Copy-Item "~\.deployment\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\"
+Copy-Item "$DeploymentDirectory\Console\Windows PowerShell.lnk" "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\"
 #endregion
 
 # Allow MSBuild, PowerShell, etc to work with long file paths by default.
@@ -77,7 +78,7 @@ cinst microsoft-windows-terminal -y
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force
 Remove-Item "$terminalAppDataDirectory\LocalState" -Force -Recurse -ErrorAction SilentlyContinue
-New-Item -Path "$terminalAppDataDirectory\LocalState" -ItemType SymbolicLink -Value "~\.deployment\Terminal" -Force
+New-Item -Path "$terminalAppDataDirectory\LocalState" -ItemType SymbolicLink -Value "$DeploymentDirectory\Terminal" -Force
 #endregion
 
 #region Developer mode
@@ -154,7 +155,7 @@ Get-Process explorer | Stop-Process -Force
 #endregion
 
 #region Theme
-& "~\.deployment\sunset.deskthemepack"
+& "$DeploymentDirectory\sunset.deskthemepack"
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name ColorPrevalence  -Value 1 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColor -Value 4279703319 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColorInactive -Value 4279703319 -PropertyType DWORD -Force
@@ -166,7 +167,7 @@ New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 
 #region Visual Studio Code
 mkdir "$($env:APPDATA)\Code" -Force | Out-Null
-New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "~\.deployment\VSCode" -Force
+New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "$DeploymentDirectory\VSCode" -Force
 cinst vscode -y
 RefreshEnv
 code --install-extension ms-vscode.PowerShell
@@ -194,13 +195,13 @@ Get-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -E
 #region Sublime Merge
 cinst sublimemerge -y
 mkdir "$($env:APPDATA)\Sublime Merge\Packages" -Force | Out-Null
-New-Item -Path "$($env:APPDATA)\Sublime Merge\Packages\User" -ItemType SymbolicLink -Value "~\.deployment\Sublime Merge\Packages\User" -Force
+New-Item -Path "$($env:APPDATA)\Sublime Merge\Packages\User" -ItemType SymbolicLink -Value "$DeploymentDirectory\Sublime Merge\Packages\User" -Force
 #endregion
 
 #region vim
 cinst vim -y
-New-Item -Path '~\vimfiles' -Value '~\.deployment\wsl\vim\.vim' -ItemType SymbolicLink -Force
-New-Item -Path '~\_vimrc' -Value '~\.deployment\wsl\vim\.vimrc' -ItemType SymbolicLink -Force
+New-Item -Path '~\vimfiles' -Value "$DeploymentDirectory\wsl\vim\.vim" -ItemType SymbolicLink -Force
+New-Item -Path '~\_vimrc' -Value "$DeploymentDirectory\wsl\vim\.vimrc" -ItemType SymbolicLink -Force
 #endregion
 
 #region Python
@@ -219,7 +220,7 @@ Start-Process "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Ditto\Ditt
 
 #region VeraCrypt
 mkdir "$($env:APPDATA)\VeraCrypt" -Force | Out-Null
-New-Item -Path "$($env:APPDATA)\VeraCrypt\Configuration.xml" -ItemType SymbolicLink -Value "~\.deployment\VeraCrypt\Configuration.xml" -Force
+New-Item -Path "$($env:APPDATA)\VeraCrypt\Configuration.xml" -ItemType SymbolicLink -Value "$DeploymentDirectory\VeraCrypt\Configuration.xml" -Force
 cinst veracrypt -y
 #endregion
 

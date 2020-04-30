@@ -14,6 +14,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 cinst git -y --package-parameters='/NoAutoCrlf'
+cinst powershell-core -y
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Update-SessionEnvironment
 
@@ -25,4 +26,4 @@ if (-not $DeployType) {
    $DeployType = 'base'
 }
 
-& "$deploymentDir\$DeployType.ps1"
+pwsh -noprofile -noexit "$deploymentDir\$DeployType.ps1"
