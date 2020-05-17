@@ -166,6 +166,7 @@ New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 
 #region Visual Studio Code
 mkdir "$($env:APPDATA)\Code" -Force | Out-Null
+Remove-Item "$($env:APPDATA)\Code\User" -Force -Recurse
 New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "$DeploymentDirectory\VSCode" -Force
 cinst vscode -y
 RefreshEnv
