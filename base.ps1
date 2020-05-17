@@ -11,6 +11,7 @@ if (-not $isAdmin) {
 }
 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $DeploymentDirectory = $PSScriptRoot
 if ($target = Get-ChildItem $DeploymentDirectory | Select-Object -ExpandProperty Target) {
@@ -169,7 +170,7 @@ mkdir "$($env:APPDATA)\Code" -Force | Out-Null
 Remove-Item "$($env:APPDATA)\Code\User" -Force -Recurse
 New-Item -Path "$($env:APPDATA)\Code\User" -ItemType SymbolicLink -Value "$DeploymentDirectory\VSCode" -Force
 cinst vscode -y
-RefreshEnv
+Update-SessionEnvironment
 code --install-extension ms-vscode.PowerShell
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension streetsidesoftware.code-spell-checker
@@ -206,7 +207,7 @@ New-Item -Path '~\_vimrc' -Value "$DeploymentDirectory\wsl\vim\.vimrc" -ItemType
 
 #region Python
 cinst python3 -y
-refreshenv
+Update-SessionEnvironment
 $env:PIP_REQUIRE_VIRTUALENV = 'false'
 pip install ipython
 pip install texttable
