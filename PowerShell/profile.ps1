@@ -136,11 +136,11 @@ Register-ArgumentCompleter -Native -CommandName ssh -ScriptBlock {
     if (($commandAst.CommandElements.Count -eq 1) -or
         ($commandAst.CommandElements.Count -eq 2 -and $WordToComplete)) {
         Get-Content ~\.ssh\config `
-            | Where-Object { $_ -match '^Host (.*)$' } `
-            | ForEach-Object { $Matches[1] }
-            | Where-Object { $_ -ne '*' }
-            | Sort-Object
-            | Where-Object { $_ -like "$WordToComplete*" }
+        | Where-Object { $_ -match '^Host (.*)$' } `
+        | ForEach-Object { $Matches[1] } `
+        | Where-Object { $_ -ne '*' } `
+        | Sort-Object `
+        | Where-Object { $_ -like "$WordToComplete*" }
     }
 }
 #endregion
