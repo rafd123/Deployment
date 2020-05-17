@@ -6,9 +6,9 @@ $Host.UI.RawUI.WindowTitle = 'PowerShell'
 $profileDirectory = Split-Path $profile
 $env:path += ";$(Join-Path $profileDirectory 'CustomScripts')"
 $env:PSModulePath += ";$(Join-Path $profileDirectory 'CustomModules')"
-$env:PIP_REQUIRE_VIRTUALENV='true'
-$env:GIT_SSH="$env:SystemRoot\System32\OpenSSH\ssh.exe"
-$env:ANDROID_HOME="$env:LOCALAPPDATA\Android\Sdk"
+$env:PIP_REQUIRE_VIRTUALENV = 'true'
+$env:GIT_SSH = "$env:SystemRoot\System32\OpenSSH\ssh.exe"
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
 $env:path += ";$env:LOCALAPPDATA\Android\Sdk\platform-tools"
 $env:path += ";${env:ProgramFiles(x86)}\pgAdmin 4\v4\runtime"
 
@@ -42,7 +42,7 @@ Remove-Item alias:\curl -ErrorAction SilentlyContinue; Set-Alias -Name curl -Val
 
 #region functions
 function rider {
-    $rider = Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains,$env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue `
+    $rider = Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains, $env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue `
     | Sort-Object { $_.VersionInfo.ProductVersionRaw } -Descending `
     | Select-Object -First 1 `
     | Select-Object -ExpandProperty FullName `
@@ -57,7 +57,7 @@ function prompt {
     Write-Host ''
     Write-Host (Get-Location).Path -NoNewline -ForegroundColor DarkGray
 
-	Write-VcsStatus
+    Write-VcsStatus
 
     $nextHistoryId = (Get-History -Count 1).Id + 1
     Write-Host "`n[$nextHistoryId]>" -ForegroundColor DarkGray -NoNewline
@@ -84,7 +84,7 @@ Import-Module z
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+    Import-Module "$ChocolateyProfile"
 }
 
 if (Get-Module DockerCompletion -ListAvailable) {
@@ -118,7 +118,8 @@ function tmux {
 
     if ($UseBashConfig) {
         bash -c "tmux $args"
-    } else {
+    }
+    else {
         bash -c "tmux -f ~/.deployment/wsl/tmux/pstmux.conf $args"
     }
 }
