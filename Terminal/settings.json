@@ -18,7 +18,7 @@
       "source": "Windows.Terminal.PowershellCore",
       "fontFace": "DejaVu Sans Mono for Powerline",
       "fontSize": 10,
-      "colorScheme": "Monokai Night",
+      // "colorScheme": "Monokai Night",
       // "backgroundImage": "ms-appdata:///local/PowerShell_logo.png",
       "backgroundImageOpacity": 0.2,
       "backgroundImageAlignment": "bottomRight",
