@@ -12,5 +12,6 @@
 	"git_binary": "system",
 	"hide_menu": true,
 	"theme": "Merge Dark.sublime-theme",
-	"word_wrap": false
+	"word_wrap": false,
+	"side_bar_layout": "tabs",
 }
