@@ -152,4 +152,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "remote.SSH.remotePlatform": {
+    "kalera-master": "linux"
+  },
 }
