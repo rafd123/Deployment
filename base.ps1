@@ -81,7 +81,7 @@ New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name
 
 #region Terminal
 cinst microsoft-windows-terminal -y
-$terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+$terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force
 Remove-Item "$terminalAppDataDirectory\LocalState" -Force -Recurse -ErrorAction SilentlyContinue
 New-Item -Path "$terminalAppDataDirectory\LocalState" -ItemType SymbolicLink -Value "$DeploymentDirectory\Terminal" -Force
