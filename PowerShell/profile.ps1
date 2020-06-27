@@ -95,6 +95,7 @@ Import-Module DirColors
 Update-DirColors ~/.deployment/wsl/.dircolors
 
 Set-PSReadlineOption -ContinuationPrompt " ... "
+Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
 #endregion
 
 #region default param values
