@@ -1,8 +1,6 @@
 #region environment
 Set-StrictMode -version latest
 
-$Host.UI.RawUI.WindowTitle = 'PowerShell'
-
 $profileDirectory = Split-Path $profile
 $env:path += ";$(Join-Path $profileDirectory 'CustomScripts')"
 $env:PSModulePath += ";$(Join-Path $profileDirectory 'CustomModules')"

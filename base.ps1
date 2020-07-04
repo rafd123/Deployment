@@ -161,7 +161,7 @@ Get-Process explorer | Stop-Process -Force
 #endregion
 
 #region Theme
-& "$DeploymentDirectory\sunset.deskthemepack"
+& "$DeploymentDirectory\valley.deskthemepack"
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name ColorPrevalence  -Value 1 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColor -Value 4279703319 -PropertyType DWORD -Force
 New-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\DWM' -Name AccentColorInactive -Value 4279703319 -PropertyType DWORD -Force

@@ -138,10 +138,4 @@ function title {
     echo -e '\033]2;'$1'\007'
 }
 
-if [ -f ~/.powerline-shell.txt ]; then
-    title $(cat ~/.powerline-shell.txt)
-else
-    title $(cat /etc/os-release | grep PRETTY_NAME | awk -F '=' '{print $2}' | sed 's/"//g')
-fi
-
 eval $(ssh-agent -s)

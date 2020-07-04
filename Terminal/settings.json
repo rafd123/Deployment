@@ -21,6 +21,10 @@
 
     "confirmCloseAllTabs": false,
 
+    "alwaysShowTabs": false,
+
+    "showTabsInTitlebar": false,
+
     // A profile specifies a command to execute paired with information about how it should look and feel.
     // Each one of them will appear in the 'New Tab' dropdown,
     //   and can be invoked from the commandline with `wt.exe -p xxx`
@@ -32,9 +36,9 @@
             // Put settings here that you want to apply to all profiles.
             "fontFace": "DejaVu Sans Mono for Powerline",
             "fontSize": 10,
-            "padding": "0, 8",
-            // "background": "#1E1E1E",
-            "background": "#000000",
+            "padding": "0, 0",
+            "background": "#171717",
+            // "background": "#000000",
             "scrollbarState": "hidden"
         },
         "list":
@@ -56,7 +60,7 @@
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "PowerShell",
+                "name": " ",
                 "source": "Windows.Terminal.PowershellCore",
                 "icon": "ms-appdata:///local/pwsh.png"
             },
