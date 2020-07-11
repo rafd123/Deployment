@@ -36,7 +36,6 @@
             // Put settings here that you want to apply to all profiles.
             "fontFace": "DejaVu Sans Mono for Powerline",
             "fontSize": 10,
-            "padding": "0, 0",
             "background": "#171717",
             // "background": "#000000",
             "scrollbarState": "hidden"
