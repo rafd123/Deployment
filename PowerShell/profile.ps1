@@ -31,7 +31,6 @@ Set-Alias fs Search-Code
 Set-Alias n Open-TextEditor
 Set-Alias ss Select-String
 Set-Alias dl Set-LocationAlias
-Set-Alias su Elevate-Process
 Set-Alias ch Copy-HistoryToClipboard
 Set-Alias sw Search-Web
 Set-Alias pt ConvertTo-PrettyTable
@@ -40,6 +39,10 @@ Remove-Item alias:\curl -ErrorAction SilentlyContinue; Set-Alias -Name curl -Val
 #endregion
 
 #region functions
+function su {
+    Invoke-ElevatedCommand "& '$(Get-Process -Id $pid | Select-Object -ExpandProperty Path)'"
+}
+
 function rider {
     $rider = Get-ChildItem ${env:ProgramFiles(x86)}\JetBrains, $env:ProgramFiles\JetBrains rider64.exe -Recurse -ErrorAction SilentlyContinue `
     | Sort-Object { $_.VersionInfo.ProductVersionRaw } -Descending `
