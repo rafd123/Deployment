@@ -155,4 +155,6 @@
   "remote.SSH.remotePlatform": {
     "kalera-master": "linux"
   },
+  "java.requirements.JDK11Warning": false,
+  "java.semanticHighlighting.enabled": true,
 }
