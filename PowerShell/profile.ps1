@@ -21,6 +21,7 @@ $projects = $repos ### Backward compat with existing scripts
 #endregion
 
 #region aliases
+Set-Alias sudo Invoke-ElevatedCommand
 Set-Alias done Show-CommandCompleteNotification
 Set-Alias u Set-LocationAncestor
 Set-Alias e Open-Explorer

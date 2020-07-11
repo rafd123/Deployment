@@ -81,7 +81,6 @@ $payload = $payloadPrefix + ([PSCustomObject]@{
 	}
 } | ConvertTo-Json | encode)
 
-
 $savetitle = $Host.UI.RawUI.WindowTitle
 $process = New-Object System.Diagnostics.Process
 $start = $process.StartInfo
