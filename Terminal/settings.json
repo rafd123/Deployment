@@ -21,9 +21,9 @@
 
     "confirmCloseAllTabs": false,
 
-    "alwaysShowTabs": false,
+    "alwaysShowTabs": true,
 
-    "showTabsInTitlebar": false,
+    "showTabsInTitlebar": true,
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
     // Each one of them will appear in the 'New Tab' dropdown,
@@ -38,6 +38,7 @@
             "fontSize": 10,
             "background": "#171717",
             // "background": "#000000",
+            "padding": "0, 8",
             "scrollbarState": "hidden"
         },
         "list":
@@ -59,7 +60,7 @@
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": " ",
+                "name": "Terminal",
                 "source": "Windows.Terminal.PowershellCore",
                 "icon": "ms-appdata:///local/pwsh.png"
             },
