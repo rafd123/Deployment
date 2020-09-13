@@ -91,10 +91,6 @@ New-Item -Path "$terminalAppDataDirectory\LocalState" -ItemType SymbolicLink -Va
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -Value 1
 #endregion
 
-#region Windows Defender
-Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Name DisableAntiSpyware -Value 1
-#endregion
-
 #region Replace annoying "bling" sound
 Get-ChildItem 'HKCU:\AppEvents\Schemes\Apps\.Default\' -Recurse |
     Get-ItemProperty -Name '(default)' -ErrorAction SilentlyContinue |

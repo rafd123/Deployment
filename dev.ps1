@@ -12,6 +12,10 @@ if(-not $isAdmin) {
 
 . $PSScriptRoot\base.ps1
 
+#region Windows Defender
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Name DisableAntiSpyware -Value 1
+#endregion
+
 #region WSL
 $wslInstallationResult = Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -Online -NoRestart
 
