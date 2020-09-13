@@ -80,7 +80,7 @@ Copy-Item "$DeploymentDirectory\Console\Windows PowerShell.lnk" "$env:APPDATA\Mi
 New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name LongPathsEnabled  -Value 1 -PropertyType DWORD -Force
 
 #region Terminal
-cinst microsoft-windows-terminal -y
+cinst microsoft-windows-terminal -y --pre
 $terminalAppDataDirectory = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe"
 mkdir $terminalAppDataDirectory -Force
 Remove-Item "$terminalAppDataDirectory\LocalState" -Force -Recurse -ErrorAction SilentlyContinue
