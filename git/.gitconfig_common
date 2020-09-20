@@ -1,5 +1,7 @@
 [user]
 	useconfigonly = true
+[commit]
+	gpgsign = true
 [help]
 	autocorrect = 1
 [color]
