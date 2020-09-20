@@ -4,6 +4,8 @@
 	editor = code --wait
 	longpaths = true
 	symlinks = true
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
 [difftool]
 	prompt = false
 [merge]

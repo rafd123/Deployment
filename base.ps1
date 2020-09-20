@@ -195,6 +195,10 @@ Get-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -E
 | Enable-WindowsOptionalFeature -Online -NoRestart
 #endregion
 
+#region GPG
+cinst gpg4win -y
+#endregion
+
 #region Sublime Merge
 cinst sublimemerge -y
 mkdir "$($env:APPDATA)\Sublime Merge\Packages" -Force | Out-Null
