@@ -45,6 +45,8 @@ if(-not $isAdmin) {
 
 # cinst screenpresso --ignore-checksums -y
 
+# cinst camtasia -y
+
 #region Snagit
 # mkdir "$($env:LOCALAPPDATA)\TechSmith\Snagit" -Force | Out-Null
 # New-Item -Path "$($env:LOCALAPPDATA)\TechSmith\Snagit\Presets2.xml" -ItemType SymbolicLink -Value "~\.deployment\Snagit\Presets2.xml" -Force
