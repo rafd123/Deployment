@@ -33,7 +33,7 @@ if ($wslInstallationResult) {
     if (-not (Get-AppxPackage CanonicalGroupLimited.Ubuntu* -ErrorAction SilentlyContinue)) {
         & {
             $ProgressPreference = 'SilentlyContinue'
-            Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile $env:TEMP\Ubuntu.appx -UseBasicParsing
+            Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile $env:TEMP\Ubuntu.appx -UseBasicParsing
         }
 
         Add-AppxPackage -Path $env:TEMP\Ubuntu.appx
@@ -42,7 +42,7 @@ if ($wslInstallationResult) {
         New-ItemProperty `
             HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
             -Name InitWSL `
-            -Value "powershell.exe -NoExit `"& { cd ~; & '$installLocation\ubuntu' -c './.deployment/wsl/deploy.sh' }`"" `
+            -Value "powershell.exe -NoExit `"& { cd ~; & '$installLocation\ubuntu2004' -c './.deployment/wsl/deploy.sh' }`"" `
             -Force
     }
 }
