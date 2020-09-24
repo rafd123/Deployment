@@ -14,7 +14,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $DeploymentDirectory = $PSScriptRoot
-if ($target = Get-ChildItem $DeploymentDirectory | Select-Object -ExpandProperty Target) {
+if ($target = Get-Item $DeploymentDirectory | Select-Object -ExpandProperty Target) {
     $DeploymentDirectory = $target
 }
 
