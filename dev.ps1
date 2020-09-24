@@ -17,18 +17,18 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Nam
 #endregion
 
 #region WSL
-$wslInstallationResult = Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -Online -NoRestart
+$wslInstallationResult = Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -NoRestart
 
 if ($wslInstallationResult) {
-    if ($wslInstallationResult.RestartNeeded) {
-        New-ItemProperty `
-            HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
-            -Name InstallLxRunOffline `
-            -Value "powershell.exe -NoExit `"& { sudo cinst lxrunoffline -y }`"" `
-            -Force
-    } else {
-        cinst lxrunoffline -y
-    }
+    # if ($wslInstallationResult.RestartNeeded) {
+    #     New-ItemProperty `
+    #         HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
+    #         -Name InstallLxRunOffline `
+    #         -Value "powershell.exe -NoExit `"& { sudo cinst lxrunoffline -y }`"" `
+    #         -Force
+    # } else {
+    #     cinst lxrunoffline -y
+    # }
 
     if (-not (Get-AppxPackage CanonicalGroupLimited.Ubuntu* -ErrorAction SilentlyContinue)) {
         & {
