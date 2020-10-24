@@ -157,4 +157,8 @@
   },
   "java.requirements.JDK11Warning": false,
   "java.semanticHighlighting.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "remote.extensionKind": {
+    "ms-azuretools.vscode-docker": "workspace"
+  },
 }
