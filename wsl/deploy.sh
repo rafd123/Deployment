@@ -66,7 +66,7 @@ PIP_REQUIRE_VIRTUALENV="false"
 pip3 install ipython powerline-shell powerline-status
 PIP_REQUIRE_VIRTUALENV="true"
 
-ln -sf $SUDO_USER_HOME/.deployment/wsl/powerline-shell/text.py /usr/local/lib/python3.6/dist-packages/powerline_shell/segments/text.py
+ln -sf $SUDO_USER_HOME/.deployment/wsl/powerline-shell/text.py /usr/local/lib/python3.8/dist-packages/powerline_shell/segments/text.py
 
 # #region sublime
 # wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
