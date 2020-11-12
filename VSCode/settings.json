@@ -161,4 +161,8 @@
   "remote.extensionKind": {
     "ms-azuretools.vscode-docker": "workspace"
   },
+  "workbench.startupEditor": "welcomePage",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
