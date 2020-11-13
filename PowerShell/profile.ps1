@@ -100,6 +100,7 @@ Update-DirColors ~/.deployment/wsl/.dircolors
 
 Set-PSReadlineOption -ContinuationPrompt " ... "
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
+Set-PSReadLineOption -PredictionSource History
 #endregion
 
 #region default param values
