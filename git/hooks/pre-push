@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # This hook is called with the following parameters:
 #
@@ -13,6 +14,10 @@
 # This sample shows how to prevent push of commits where the
 # log message starts with "WIP" (work in progress) and is pushed
 # to a refs/heads/ready or refs/heads/directPatch
+
+hook_name="$(basename "$0")"
+hook_script=".git/hooks/$hook_name"
+[ -e "$hook_script" ] && "$hook_script"
 
 remote="$1"
 url="$2"
