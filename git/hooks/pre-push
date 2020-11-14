@@ -1,5 +1,5 @@
-#!/bin/sh
- 
+#!/bin/bash
+
 # This hook is called with the following parameters:
 #
 # $1 -- Name of the remote to which the push is being done
@@ -13,29 +13,34 @@
 # This sample shows how to prevent push of commits where the
 # log message starts with "WIP" (work in progress) and is pushed
 # to a refs/heads/ready or refs/heads/directPatch
- 
+
 remote="$1"
 url="$2"
- 
+
 z40=0000000000000000000000000000000000000000
 
 IFS=' '
+
+git show-ref --verify --quiet refs/heads/main && \
+  main_branch='main' || \
+  main_branch='master'
+
 while read local_ref local_sha remote_ref remote_sha
 do
-  if [[ $remote_ref != refs/heads/master ]]
+  if [[ $remote_ref != "refs/heads/$main_branch" ]]
   then
     # Unprotected branch; skip check
     continue
   fi
-  
+
   if [ "$local_sha" = $z40 ]
   then
     # Handle delete
     :
   else
     # Only inspect commits not yet merged into origin/master
-    range="origin/master..$local_sha"
- 
+    range="origin/$main_branch..$local_sha"
+
     # Check for WIP commit
     commit=`git rev-list -n 1 --grep '^wip' -i "$range"`
     if [ -n "$commit" ]
@@ -50,8 +55,8 @@ do
     then
       echo "Found FIXUP commit in $local_ref: $commit, not pushing."
       exit 1
-    fi    
+    fi
   fi
 done
- 
+
 exit 0
