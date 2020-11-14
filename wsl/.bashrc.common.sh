@@ -139,3 +139,5 @@ function title {
 }
 
 eval $(ssh-agent -s)
+
+export GPG_TTY=$(tty)
