@@ -50,7 +50,7 @@ if ($wslInstallationResult) {
 
 #region vcxsrv
 cinst vcxsrv -y
-New-Item -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch" -ItemType SymbolicLink -Value "~\.deployment\VcXsrv\config.xlaunch" -Force
+New-Item -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch" -ItemType SymbolicLink -Value "$DeploymentDirectory\VcXsrv\config.xlaunch" -Force
 Start-Process "~\.deployment\VcXsrv\config.xlaunch"
 #endregion
 

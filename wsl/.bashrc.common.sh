@@ -129,7 +129,8 @@ if [ -f ~/scripts/z.sh ]; then
     . ~/scripts/z.sh
 fi
 
-export DISPLAY=localhost:0.0
+# export DISPLAY=localhost:0.0
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
