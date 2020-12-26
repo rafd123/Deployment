@@ -5,7 +5,8 @@
 		"tokenization",
 		"refactor",
 		"Refactored",
-		"Twilio"
+		"Twilio",
+		"unhandled",
 	],
 	"diff_style": "auto",
 	"expand_merge_commits_by_default": true,
