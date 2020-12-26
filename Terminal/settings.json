@@ -84,6 +84,18 @@
           "hidden": false,
           "name": "Ubuntu-20.04",
           "source": "Windows.Terminal.Wsl"
+      },
+      {
+          "guid": "{a5d94bce-9c2d-5a4d-abf2-0a93657b8183}",
+          "hidden": false,
+          "name": "rafd123-default",
+          "source": "Windows.Terminal.Wsl"
+      },
+      {
+          "guid": "{e9ebf0b3-6106-5f89-8311-61d60742f5a9}",
+          "hidden": false,
+          "name": "rheostat",
+          "source": "Windows.Terminal.Wsl"
       }
     ]
   },
