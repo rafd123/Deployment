@@ -46,15 +46,25 @@ Set-Service ssh-agent -StartupType Automatic
     Rename-Item "$powerShellDirectory.1" $powerShellDirectory
 }
 
-
+#region Fonts
 $shellApp = New-Object -ComObject shell.application
 $fonts = $shellApp.NameSpace(0x14)
 $installedFontNames = $fonts.Items() | Select-Object -ExpandProperty Name
+
+if ($installedFontNames -notcontains 'MesloLGM Nerd Font Regular') {
+    $fonts.CopyHere((Get-ChildItem "$DeploymentDirectory\Meslo LG M Regular Nerd Font Complete.ttf" | Select-Object -ExpandProperty FullName))
+}
+
+if ($installedFontNames -notcontains 'MesloLGM Nerd Font Regular Mono') {
+    $fonts.CopyHere((Get-ChildItem "$DeploymentDirectory\Meslo LG M Regular Nerd Font Complete Mono.ttf" | Select-Object -ExpandProperty FullName))
+}
+
 if ($installedFontNames -notcontains 'DejaVu Sans Mono for Powerline') {
     Remove-Item "$env:temp\fonts" -Recurse -Force -ErrorAction SilentlyContinue
     git clone https://github.com/PowerLine/fonts "$env:temp\fonts"
     & "$env:TEMP\fonts\install.ps1" dejavu*
 }
+#endregion
 
 #### Hack around the weird state that PowerLine and Pansies is in with regard to PS 7
 #### https://github.com/Jaykul/PowerLine/issues/61
@@ -64,7 +74,7 @@ Install-Module Pansies -Scope Currentuser -AllowClobber -Force -MaximumVersion 1
 
 
 Install-Module posh-git -Scope CurrentUser -AllowClobber -Force
-Install-Module oh-my-posh -Scope CurrentUser -AllowClobber -Force
+Install-Module oh-my-posh -Scope CurrentUser -AllowClobber -AllowPrerelease -Force
 Install-Module z -Scope CurrentUser -AllowClobber -Force
 Install-Module DirColors -Scope CurrentUser -Force
 

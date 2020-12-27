@@ -50,16 +50,8 @@ function parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-function _update_ps1() {
-    PS1="$(powerline-shell --shell bash $?)"
-}
-
 if [ "$color_prompt" = yes ]; then
-    if type powerline-shell >/dev/null 2>&1; then
-        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-    else
-        PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[38;5;33m\]\w\[\033[01;31m\]\[\033[00m\]\n\$ '
-    fi
+    PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[38;5;33m\]\w\[\033[01;31m\]\[\033[00m\]\n\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
@@ -142,3 +134,5 @@ function title {
 eval $(ssh-agent -s)
 
 export GPG_TTY=$(tty)
+
+eval "$(oh-my-posh --init --shell bash --config ~/.deployment/PowerShell/PoshThemes/RafD123.omp.json)"

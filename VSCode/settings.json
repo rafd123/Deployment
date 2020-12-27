@@ -2,7 +2,7 @@
 {
   "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
 
-  "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
 
   "window.menuBarVisibility": "toggle",
 
@@ -168,4 +168,5 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "terminal.integrated.fontSize": 13,
 }

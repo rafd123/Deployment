@@ -32,7 +32,7 @@
   "profiles": {
     "defaults": {
       // Put settings here that you want to apply to all profiles.
-      "fontFace": "DejaVu Sans Mono for Powerline",
+      "fontFace": "MesloLGM Nerd Font",
       "fontSize": 10,
       "background": "#171717",
       "padding": "0, 8",

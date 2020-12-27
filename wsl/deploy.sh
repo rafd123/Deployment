@@ -62,12 +62,6 @@ chmod +x /usr/local/bin/docker-compose
 
 $SUDO_USER_HOME/.deployment/wsl/tmux/tmux_build_from_source.sh
 
-PIP_REQUIRE_VIRTUALENV="false"
-pip3 install ipython powerline-shell powerline-status
-PIP_REQUIRE_VIRTUALENV="true"
-
-ln -sf $SUDO_USER_HOME/.deployment/wsl/powerline-shell/text.py /usr/local/lib/python3.8/dist-packages/powerline_shell/segments/text.py
-
 # #region sublime
 # wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 # apt-get install apt-transport-https
@@ -88,3 +82,6 @@ ln -sf $WIN_HOMEPATH/.ssh $SUDO_USER_HOME/.ssh
 # chmod 600 $SUDO_USER_HOME/.ssh $SUDO_USER_HOME/.ssh/*
 # umount /mnt/tmp
 # rm -fr /mnt/tmp
+
+wget https://github.com/JanDeDobbeleer/oh-my-posh3/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+chmod +x /usr/local/bin/oh-my-posh
