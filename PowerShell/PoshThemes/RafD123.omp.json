@@ -136,7 +136,7 @@
                     "properties": {
                       "prefix": "",
                       "postfix": "",
-                      "var_name": "ENVNAME"
+                      "var_name": "POSH_ENVNAME"
                     }
                 },
                 {
