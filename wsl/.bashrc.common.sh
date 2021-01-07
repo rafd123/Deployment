@@ -66,6 +66,17 @@ xterm*|rxvt*)
     ;;
 esac
 
+unset POSH_TIME
+unset PROMPT_COMMAND
+if [ -f ~/scripts/z.sh ]; then
+    . ~/scripts/z.sh
+fi
+
+eval "$(oh-my-posh --init --shell bash --config ~/.deployment/PowerShell/PoshThemes/RafD123.omp.json)"
+if [ "$TERM_PROGRAM" != 'vscode' ]; then
+    export PROMPT_COMMAND="export POSH_TIME=\$(date -u +"%H:%M:%SZ"); $PROMPT_COMMAND"
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -117,9 +128,6 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
 export PIP_REQUIRE_VIRTUALENV="true"
-if [ -f ~/scripts/z.sh ]; then
-    . ~/scripts/z.sh
-fi
 
 # export DISPLAY=localhost:0.0
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
@@ -134,5 +142,3 @@ function title {
 eval $(ssh-agent -s)
 
 export GPG_TTY=$(tty)
-
-eval "$(oh-my-posh --init --shell bash --config ~/.deployment/PowerShell/PoshThemes/RafD123.omp.json)"
