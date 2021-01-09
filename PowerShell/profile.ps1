@@ -166,12 +166,9 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 #endregion
 
 #region oh-my-posh
-if ($env:TERM_PROGRAM -ne 'vscode') {
-    function Set-EnvVar {
-        $env:POSH_TIME = $(Get-Date -AsUTC -UFormat '%H:%M:%SZ')
-    }
-
-    New-Alias -Name 'Set-PoshContext' -Value 'Set-EnvVar' -Scope Global
+function Set-EnvVar {
+    $env:POSH_TIME = $(Get-Date -AsUTC -UFormat '%H:%M:%SZ')
 }
 
+New-Alias -Name 'Set-PoshContext' -Value 'Set-EnvVar' -Scope Global
 #endregion

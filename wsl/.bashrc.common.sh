@@ -73,9 +73,7 @@ if [ -f ~/scripts/z.sh ]; then
 fi
 
 eval "$(oh-my-posh --init --shell bash --config ~/.deployment/PowerShell/PoshThemes/RafD123.omp.json)"
-if [ "$TERM_PROGRAM" != 'vscode' ]; then
-    export PROMPT_COMMAND="export POSH_TIME=\$(date -u +"%H:%M:%SZ"); $PROMPT_COMMAND"
-fi
+export PROMPT_COMMAND="export POSH_TIME=\$(date -u +"%H:%M:%SZ"); $PROMPT_COMMAND"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
