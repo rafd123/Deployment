@@ -49,7 +49,8 @@ mkdir "$($env:APPDATA)\GitExtensions\GitExtensions" -Force | Out-Null
 Copy-Item "~\.deployment\GitExtensions\GitExtensions.settings" "$($env:APPDATA)\GitExtensions\GitExtensions\GitExtensions.settings" -Force
 #endregion
 
-cinst nodejs -y
+# cinst nodejs -y
+cinst nvm -y
 cinst windbg -y
 
 #region Visual Studio
