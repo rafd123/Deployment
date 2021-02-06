@@ -10,8 +10,6 @@ if(-not $isAdmin) {
     return
  }
 
-# cinst clockify -y
-
 # Install-Module AWSPowerShell -Scope CurrentUser -Force
 
 # Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber -Force
