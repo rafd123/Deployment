@@ -25,9 +25,9 @@
 
   "showTabsInTitlebar": true,
 
-  "initialPosition": "63,0",
+  "initialPosition": "0,0",
 
-  "initialCols": 105,
+  "initialCols": 106,
 
   // A profile specifies a command to execute paired with information about how it should look and feel.
   // Each one of them will appear in the 'New Tab' dropdown,
