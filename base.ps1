@@ -235,6 +235,8 @@ cinst veracrypt -y
 #endregion
 
 cinst signal -y
+cinst slack -y
+cinst microsoft-teams -y
 cinst alt-tab-terminator -y
 cinst powertoys -y
 cinst GoogleChrome -y
