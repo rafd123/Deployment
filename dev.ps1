@@ -17,35 +17,7 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Nam
 #endregion
 
 #region WSL
-$wslInstallationResult = Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -NoRestart
-
-if ($wslInstallationResult) {
-    # if ($wslInstallationResult.RestartNeeded) {
-    #     New-ItemProperty `
-    #         HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
-    #         -Name InstallLxRunOffline `
-    #         -Value "powershell.exe -NoExit `"& { sudo cinst lxrunoffline -y }`"" `
-    #         -Force
-    # } else {
-    #     cinst lxrunoffline -y
-    # }
-
-    if (-not (Get-AppxPackage CanonicalGroupLimited.Ubuntu* -ErrorAction SilentlyContinue)) {
-        & {
-            $ProgressPreference = 'SilentlyContinue'
-            Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile $env:TEMP\Ubuntu.appx -UseBasicParsing
-        }
-
-        Add-AppxPackage -Path $env:TEMP\Ubuntu.appx
-
-        $installLocation = (Get-AppxPackage CanonicalGroupLimited.Ubuntu*).InstallLocation
-        New-ItemProperty `
-            HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce `
-            -Name InitWSL `
-            -Value "powershell.exe -NoExit `"& { cd ~; & '$installLocation\ubuntu2004' -c './.deployment/wsl/deploy.sh' }`"" `
-            -Force
-    }
-}
+Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux") -NoRestart
 #endregion
 
 #region vcxsrv
