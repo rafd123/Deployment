@@ -66,13 +66,6 @@ if ($installedFontNames -notcontains 'DejaVu Sans Mono for Powerline') {
 }
 #endregion
 
-#### Hack around the weird state that PowerLine and Pansies is in with regard to PS 7
-#### https://github.com/Jaykul/PowerLine/issues/61
-Install-Module PowerLine -Scope CurrentUser -AllowClobber -Force -MaximumVersion 3.1.2
-Uninstall-Module Pansies -Force
-Install-Module Pansies -Scope Currentuser -AllowClobber -Force -MaximumVersion 1.4.0 -AllowPrerelease
-
-
 Install-Module posh-git -Scope CurrentUser -AllowClobber -Force
 Install-Module oh-my-posh -Scope CurrentUser -AllowClobber -AllowPrerelease -Force
 Install-Module z -Scope CurrentUser -AllowClobber -Force
