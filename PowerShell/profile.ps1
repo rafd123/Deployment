@@ -168,6 +168,10 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 #region oh-my-posh
 function Set-EnvVar {
     $env:POSH_TIME = $(Get-Date -AsUTC -UFormat '%H:%M:%SZ')
+
+    if ($env:SSH_CONNECTION) {
+        $env:POSH_SSH_HOST = $(hostname)
+    }
 }
 
 New-Alias -Name 'Set-PoshContext' -Value 'Set-EnvVar' -Scope Global

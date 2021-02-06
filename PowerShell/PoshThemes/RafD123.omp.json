@@ -17,6 +17,20 @@
             "vertical_offset": 0,
             "segments": [
                 {
+                    "type": "envvar",
+                    "style": "plain",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "#26C6DA",
+                    "background": "#546E7A",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "postfix": " ",
+                        "var_name": "POSH_SSH_HOST"
+                    }
+                },
+                {
                     "type": "os",
                     "style": "plain",
                     "powerline_symbol": "",
