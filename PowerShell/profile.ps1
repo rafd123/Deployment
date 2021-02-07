@@ -55,10 +55,13 @@ function rider {
     & $rider $args
 }
 
+$hostname = $(hostname)
+
 function prompt {
     Set-StrictMode -Off
 
     Write-Host ''
+    Write-Host "$hostname " -NoNewLine -ForegroundColor DarkGray
     Write-Host (Get-Location).Path -NoNewline -ForegroundColor DarkGray
 
     Write-VcsStatus
@@ -166,12 +169,10 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 #endregion
 
 #region oh-my-posh
+$env:POSH_HOST = $(hostname)
+
 function Set-EnvVar {
     $env:POSH_TIME = $(Get-Date -AsUTC -UFormat '%H:%M:%SZ')
-
-    if ($env:SSH_CONNECTION) {
-        $env:POSH_SSH_HOST = $(hostname)
-    }
 }
 
 New-Alias -Name 'Set-PoshContext' -Value 'Set-EnvVar' -Scope Global

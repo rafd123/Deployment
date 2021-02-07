@@ -140,3 +140,5 @@ function title {
 eval $(ssh-agent -s)
 
 export GPG_TTY=$(tty)
+
+export POSH_HOST=$(hostname)

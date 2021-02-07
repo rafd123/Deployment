@@ -27,7 +27,7 @@
                     "trailing_diamond": "",
                     "properties": {
                         "postfix": " ",
-                        "var_name": "POSH_SSH_HOST"
+                        "var_name": "POSH_HOST"
                     }
                 },
                 {
