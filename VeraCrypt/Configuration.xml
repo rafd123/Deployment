@@ -15,7 +15,7 @@
 		<config key="MountFavoritesOnLogon">0</config>
 		<config key="MountVolumesReadOnly">0</config>
 		<config key="MountVolumesRemovable">0</config>
-		<config key="PreserveTimestamps">0</config>
+		<config key="PreserveTimestamps">1</config>
 		<config key="ShowDisconnectedNetworkDrives">0</config>
 		<config key="HideWaitingDialog">0</config>
 		<config key="UseSecureDesktop">0</config>
