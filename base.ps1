@@ -235,7 +235,11 @@ New-Item -Path "$($env:APPDATA)\VeraCrypt\Configuration.xml" -ItemType SymbolicL
 cinst veracrypt -y
 #endregion
 
+#region Signal
 cinst signal -y
+Copy-Item "$DeploymentDirectory\Signal\Signal.lnk" "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\Signal.lnk" -Force
+#endregion
+
 cinst slack -y
 cinst microsoft-teams -y
 cinst alt-tab-terminator -y
