@@ -1,7 +1,7 @@
 [core]
 	#editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -w
 	#editor = code --wait --new-window
-	editor = code --wait
+	#editor = code --wait
 	longpaths = true
 	symlinks = true
 [gpg]
