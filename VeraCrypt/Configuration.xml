@@ -53,6 +53,6 @@
 		<config key="Language">en</config>
 		<config key="SecurityTokenLibrary"></config>
 		<config key="DefaultPRF">0</config>
-		<config key="DefaultTrueCryptMode">1</config>
+		<config key="DefaultTrueCryptMode">0</config>
 	</configuration>
 </VeraCrypt>
