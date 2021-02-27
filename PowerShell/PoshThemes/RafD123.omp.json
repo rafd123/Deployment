@@ -47,17 +47,6 @@
                     }
                 },
                 {
-                    "type": "root",
-                    "style": "plain",
-                    "powerline_symbol": "",
-                    "invert_powerline": false,
-                    "foreground": "#26C6DA",
-                    "background": "#546E7A",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
-                    "properties": null
-                },
-                {
                     "type": "path",
                     "style": "plain",
                     "powerline_symbol": "",
@@ -151,6 +140,17 @@
                       "postfix": "",
                       "var_name": "POSH_ENVNAME"
                     }
+                },
+                {
+                    "type": "root",
+                    "style": "plain",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "#D4E157",
+                    "background": "",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": null
                 },
                 {
                     "type": "exit",
